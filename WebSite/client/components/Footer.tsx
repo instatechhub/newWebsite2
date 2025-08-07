@@ -33,7 +33,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="text-2xl font-bold text-foreground">
-                <span className="text-primary">W</span>folio
+                <span className="text-primary">L</span>ogo
               </div>
             </Link>
           </div>
@@ -43,16 +43,16 @@ const Footer = () => {
             <h4 className="font-bold text-foreground mb-6 text-lg">CONTACT</h4>
             <div className="space-y-4">
               <div>
-                <p className="text-foreground font-medium">Business District</p>
+                <p className="text-foreground font-medium">MangalCity, Opp- Level 3,</p>
                 <p className="text-foreground font-medium">
-                  New York, NY 10001
+                 Vijay Nagar Indore, Madhya Pradesh 452010
                 </p>
               </div>
               <div>
                 <p className="text-primary font-medium">
                   contact@webfoliobpo.com
                 </p>
-                <p className="text-primary font-medium">+1 800 BPO CALL</p>
+                <p className="text-primary font-medium">+91 8120545454 CALL</p>
               </div>
             </div>
           </div>

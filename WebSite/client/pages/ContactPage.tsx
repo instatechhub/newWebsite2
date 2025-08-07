@@ -24,7 +24,7 @@ const ContactPage = () => {
       icon: Phone,
       title: 'Call Us',
       description: 'Speak with our experts',
-      info: '+1 (800) BPO-CALL',
+      info: '+91 8120545454 BPO-CALL',
       available: '24/7 Available',
       color: 'from-blue-500/20 to-blue-600/20'
     },
@@ -32,15 +32,15 @@ const ContactPage = () => {
       icon: Mail,
       title: 'Email Us',
       description: 'Send us a message',
-      info: 'contact@webfoliobpo.com',
+      info: 'support@instaconnects.in',
       available: 'Response within 2 hours',
       color: 'from-green-500/20 to-green-600/20'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      description: 'Our global offices',
-      info: 'Business District, New York',
+      description: 'Our office',
+      info: 'Opp- Level 3, Vijay Nagar Indore, Madhya Pradesh 452010',
       available: 'Mon-Fri 9AM-6PM',
       color: 'from-purple-500/20 to-purple-600/20'
     },
@@ -56,32 +56,32 @@ const ContactPage = () => {
 
   const offices = [
     {
-      city: 'New York',
-      country: 'USA',
-      address: '123 Business District, NY 10001',
-      phone: '+1 (212) 555-0123',
-      email: 'ny@webfoliobpo.com',
-      timezone: 'EST',
+      city: 'Indore',
+      country: 'INDIA',
+      address: 'MangalCity, Opp- Level 3, Vijay Nagar Indore, Madhya Pradesh 452010',
+      phone: '+91 8120545454',
+      email: 'support@instaconnects.in',
+      timezone: 'Asia/Kolkata',
       image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400&h=300&fit=crop'
     },
-    {
-      city: 'London',
-      country: 'UK',
-      address: '456 Financial Street, London EC2V 8RF',
-      phone: '+44 20 7946 0958',
-      email: 'london@webfoliobpo.com',
-      timezone: 'GMT',
-      image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=300&fit=crop'
-    },
-    {
-      city: 'Singapore',
-      country: 'Asia Pacific',
-      address: '789 Marina Bay, Singapore 018956',
-      phone: '+65 6234 5678',
-      email: 'singapore@webfoliobpo.com',
-      timezone: 'SGT',
-      image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&h=300&fit=crop'
-    }
+    // {
+    //   city: 'London',
+    //   country: 'UK',
+    //   address: '456 Financial Street, London EC2V 8RF',
+    //   phone: '+44 20 7946 0958',
+    //   email: 'london@webfoliobpo.com',
+    //   timezone: 'GMT',
+    //   image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=300&fit=crop'
+    // },
+    // {
+    //   city: 'Singapore',
+    //   country: 'Asia Pacific',
+    //   address: '789 Marina Bay, Singapore 018956',
+    //   phone: '+65 6234 5678',
+    //   email: 'singapore@webfoliobpo.com',
+    //   timezone: 'SGT',
+    //   image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&h=300&fit=crop'
+    // }
   ];
 
   const services = [
@@ -227,7 +227,7 @@ const ContactPage = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-2">{method.title}</h3>
                     <p className="text-muted-foreground mb-4">{method.description}</p>
-                    <div className="text-lg font-semibold text-primary mb-2">{method.info}</div>
+                    <div className="text-lg font-semibold text-primary mb-2 break-all">{method.info}</div>
                     <div className="text-sm text-muted-foreground">{method.available}</div>
                   </div>
                 </div>
@@ -344,7 +344,7 @@ const ContactPage = () => {
             {/* Office Locations */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-3xl font-bold mb-6">Our Global Offices</h3>
+                <h3 className="text-3xl font-bold mb-6">Our Office</h3>
                 <p className="text-muted-foreground mb-8">
                   With offices around the world, we provide local support and global expertise 
                   to serve your business needs across all time zones.

@@ -65,7 +65,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold text-foreground">
-              <span className="text-primary">W</span>folio
+              <span className="text-primary">L</span>ogo
             </div>
           </Link>
 
@@ -137,9 +137,9 @@ const Navigation = () => {
             <button
               onClick={toggleTheme}
               className="w-10 h-10 rounded-full bg-card hover:bg-muted transition-all duration-300 flex items-center justify-center group hover:scale-110"
-              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             >
-              {theme === 'dark' ? (
+              {theme === "dark" ? (
                 <Sun className="h-5 w-5 text-foreground group-hover:text-primary transition-colors" />
               ) : (
                 <Moon className="h-5 w-5 text-foreground group-hover:text-primary transition-colors" />
@@ -217,15 +217,19 @@ const Navigation = () => {
                 onClick={toggleTheme}
                 className="w-full flex items-center justify-center space-x-2 px-4 py-2.5 bg-card hover:bg-muted rounded-lg transition-colors"
               >
-                {theme === 'dark' ? (
+                {theme === "dark" ? (
                   <>
                     <Sun className="h-4 w-4 text-foreground" />
-                    <span className="text-sm font-medium text-foreground">Light Mode</span>
+                    <span className="text-sm font-medium text-foreground">
+                      Light Mode
+                    </span>
                   </>
                 ) : (
                   <>
                     <Moon className="h-4 w-4 text-foreground" />
-                    <span className="text-sm font-medium text-foreground">Dark Mode</span>
+                    <span className="text-sm font-medium text-foreground">
+                      Dark Mode
+                    </span>
                   </>
                 )}
               </button>
