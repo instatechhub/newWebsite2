@@ -32,7 +32,7 @@ const ContactPage = () => {
       icon: Mail,
       title: 'Email Us',
       description: 'Send us a message',
-      info: 'support@instaconnects.in',
+      info: 'support @instaconnects.in',
       available: 'Response within 2 hours',
       color: 'from-green-500/20 to-green-600/20'
     },
@@ -58,7 +58,7 @@ const ContactPage = () => {
     {
       city: 'Indore',
       country: 'INDIA',
-      address: 'MangalCity, Opp- Level 3, Vijay Nagar Indore, Madhya Pradesh 452010',
+      address: 'Mangal City, Opp- Level 3, Vijay Nagar Indore, Madhya Pradesh 452010',
       phone: '+91 8120545454',
       email: 'support@instaconnects.in',
       timezone: 'Asia/Kolkata',
@@ -227,7 +227,7 @@ const ContactPage = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-2">{method.title}</h3>
                     <p className="text-muted-foreground mb-4">{method.description}</p>
-                    <div className="text-lg font-semibold text-primary mb-2 break-all">{method.info}</div>
+                    <div className="text-lg font-semibold text-primary mb-2">{method.info}</div>
                     <div className="text-sm text-muted-foreground">{method.available}</div>
                   </div>
                 </div>

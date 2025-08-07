@@ -43,9 +43,11 @@ const Footer = () => {
             <h4 className="font-bold text-foreground mb-6 text-lg">CONTACT</h4>
             <div className="space-y-4">
               <div>
-                <p className="text-foreground font-medium">MangalCity, Opp- Level 3,</p>
                 <p className="text-foreground font-medium">
-                 Vijay Nagar Indore, Madhya Pradesh 452010
+                  MangalCity, Opp- Level 3,
+                </p>
+                <p className="text-foreground font-medium">
+                  Vijay Nagar Indore, Madhya Pradesh 452010
                 </p>
               </div>
               <div>
@@ -108,11 +110,11 @@ const Footer = () => {
               </div>
               <div className="w-full border-t border-gray-600">
                 <div className="max-w-7xl mx-auto px-4 py-4 flex justify-end">
-                  <div className="flex gap-8 text-gray-400 text-sm">
-                    <span className="cursor-pointer hover:text-white transition duration-300">
+                  <div className="flex gap-8 text-gray-400 text-xs">
+                    <span className="cursor-pointer hover:text-white transition duration-300 whitespace-nowrap">
                       Privacy Policy
                     </span>
-                    <span className="cursor-pointer hover:text-white transition duration-300">
+                    <span className="cursor-pointer hover:text-white transition duration-300 whitespace-nowrap">
                       Terms & Conditions
                     </span>
                   </div>
