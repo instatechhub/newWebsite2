@@ -27,9 +27,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-t from-neutral-950 to-background">
       <div className="container-max section-padding">
-        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
-          {/* Brand Section */}
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="text-2xl font-bold text-foreground">
@@ -38,7 +36,6 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Contact Section */}
           <div>
             <h4 className="font-bold text-foreground mb-6 text-lg">CONTACT</h4>
             <div className="space-y-4">
