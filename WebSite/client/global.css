@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Modern Creative Portfolio Theme
+   * Dark-first design with professional gradient accents
+   */
+  :root {
+    /* Background Colors - Dark theme like reference */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    /* Card Colors */
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
+
+    /* Popover Colors */
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary Brand Colors - Orange/Red theme */
+    --primary: 14 100% 57%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary Colors */
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+  }
+
+  /* Light Theme Variables */
+  .light-theme {
+    /* Background Colors - Light theme */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+
+    /* Card Colors */
+    --card: 0 0% 95%;
+    --card-foreground: 0 0% 15%;
+
+    /* Popover Colors */
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 15%;
+
+    /* Primary Brand Colors - Keep the same orange but adjust contrast */
+    --primary: 14 100% 57%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary Colors */
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 15%;
+
+    /* Muted Colors */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Accent Colors - Orange accent */
+    --accent: 14 100% 57%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive Colors */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    /* Border & Input */
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 14 100% 57%;
+
+    /* Gradient Colors - Orange to Red gradient */
+    --gradient-from: 14 100% 57%;
+    --gradient-to: 0 100% 50%;
+
+    /* Neutral Scale - Grayscale */
+    --neutral-50: 0 0% 98%;
+    --neutral-100: 0 0% 96%;
+    --neutral-200: 0 0% 90%;
+    --neutral-300: 0 0% 84%;
+    --neutral-400: 0 0% 65%;
+    --neutral-500: 0 0% 46%;
+    --neutral-600: 0 0% 34%;
+    --neutral-700: 0 0% 26%;
+    --neutral-800: 0 0% 16%;
+    --neutral-900: 0 0% 10%;
+    --neutral-950: 0 0% 7%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar (if needed) */
+    --sidebar-background: 240 10% 5.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 142 86% 28%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5.9% 20%;
+    --sidebar-ring: 142 86% 28%;
+  }
+
+  .light {
+    /* Light mode overrides (if needed) */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142 86% 28%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142 86% 28%;
+  }
+
+  /* Light Theme Variables */
+  .light-theme {
+    /* Muted Colors - Light theme */
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Accent Colors */
+    --accent: 0 0% 90%;
+    --accent-foreground: 0 0% 15%;
+
+    /* Destructive Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border Colors */
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+
+    /* Ring Colors */
+    --ring: 14 100% 57%;
+
+    /* Gradient Colors */
+    --gradient-from: 14 100% 57%;
+    --gradient-to: 0 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Space Grotesk", sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-gradient-from to-gradient-to bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-white/10;
+    box-shadow:
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-nav {
+    @apply bg-background/70 backdrop-blur-2xl border-b border-white/10;
+    box-shadow:
+      0 4px 16px 0 rgba(31, 38, 135, 0.2),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-button {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20;
+    box-shadow:
+      0 4px 16px 0 rgba(31, 38, 135, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-input {
+    @apply bg-white/5 backdrop-blur-md border border-white/20 focus:bg-white/10 focus:border-white/30;
+    box-shadow:
+      0 4px 16px 0 rgba(31, 38, 135, 0.2),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .section-padding {
+    @apply px-4 md:px-8 lg:px-16 xl:px-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Enhanced glass morphism effects */
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+      0 0 40px rgba(255, 107, 71, 0.1);
+  }
+
+  /* Navigation dropdown with reliable dark background */
+  .nav-dropdown-blur {
+    background: rgba(20, 20, 20, 0.95) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow:
+      0 10px 40px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+  }
+
+  /* Light theme specific styles */
+  .light-theme .nav-dropdown-blur {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    box-shadow:
+      0 10px 40px rgba(0, 0, 0, 0.25),
+      0 0 0 1px rgba(0, 0, 0, 0.08) inset !important;
+  }
+
+  /* Light theme dropdown text colors */
+  .light-theme .nav-dropdown-blur a {
+    color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .light-theme .nav-dropdown-blur a:hover {
+    color: hsl(var(--primary)) !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .light-theme .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 8px 32px 0 rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 0 rgba(0, 0, 0, 0.05),
+      0 0 40px rgba(255, 107, 71, 0.1);
+  }
+
+  .light-theme .glass-nav {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .glass-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-hover:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 40px 0 rgba(31, 38, 135, 0.5),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+      0 0 60px rgba(255, 107, 71, 0.2);
+  }
+}
