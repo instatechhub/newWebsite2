@@ -1,5 +1,4 @@
-import { Sparkle } from 'lucide-react';
-
+import { Sparkle } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -15,10 +14,18 @@ const Contact = () => {
                   key={`h-${index}`}
                   className="flex items-center space-x-32 whitespace-nowrap"
                 >
-                  <span className="text-4xl font-bold"><Sparkle/></span>
-                  <span className="text-4xl font-bold"><Sparkle/></span>
-                  <span className="text-4xl font-bold"><Sparkle/></span>
-                  <span className="text-4xl font-bold"><Sparkle/></span>
+                  <span className="text-4xl font-bold">
+                    <Sparkle />
+                  </span>
+                  <span className="text-4xl font-bold">
+                    <Sparkle />
+                  </span>
+                  <span className="text-4xl font-bold">
+                    <Sparkle />
+                  </span>
+                  <span className="text-4xl font-bold">
+                    <Sparkle />
+                  </span>
                 </div>
               ))}
             </div>
@@ -32,8 +39,12 @@ const Contact = () => {
                   key={`d-${index}`}
                   className="flex items-center space-x-40 whitespace-nowrap"
                 >
-                  <span className="text-6xl font-bold"><Sparkle/></span>
-                  <span className="text-6xl font-bold"><Sparkle/></span>
+                  <span className="text-6xl font-bold">
+                    <Sparkle />
+                  </span>
+                  <span className="text-6xl font-bold">
+                    <Sparkle />
+                  </span>
                 </div>
               ))}
             </div>
@@ -51,16 +62,16 @@ const Contact = () => {
                   className="flex items-center space-x-16 whitespace-nowrap"
                 >
                   <span className="text-6xl md:text-8xl lg:text-9xl font-bold">
-                    Get In 
+                    Get In
                   </span>
                   <span className="text-4xl md:text-6xl lg:text-7xl font-bold">
-                    <Sparkle size={40}/>
+                    <Sparkle size={40} />
                   </span>
                   <span className="text-6xl md:text-8xl lg:text-9xl font-bold">
-                   Touch
+                    Touch
                   </span>
                   <span className="text-4xl md:text-6xl lg:text-7xl font-bold">
-                    <Sparkle size={40}/>
+                    <Sparkle size={40} />
                   </span>
                 </div>
               ))}
@@ -71,15 +82,17 @@ const Contact = () => {
           <div className="relative z-20">
             <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
               <span className="block text-primary">Get In Touch</span>
-              <span className="block text-foreground">Contact Us</span>
             </h2>
+            <span className="block w-full text-foreground text-[20px] leading-[28px] break-words">
+  Let’s work together to scale your business with our expert outsourcing solutions.
+</span>
           </div>
         </div>
 
         {/* Contact Button */}
         <div className="text-center mt-12 relative z-20">
           <button className="inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-2xl shadow-primary/25">
-            Let's Start a Project
+            Let’s Make Progress
           </button>
         </div>
       </div>

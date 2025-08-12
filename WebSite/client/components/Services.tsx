@@ -22,7 +22,7 @@ const Services = () => {
       title: "Call Center Services",
       categories: ["INBOUND", "OUTBOUND"],
       description:
-        "Professional customer support with 24/7 availability and multilingual capabilities.",
+        "High-quality inbound & outbound call management ensuring seamless customer communication.",
     },
     {
       icon: (
@@ -63,7 +63,7 @@ const Services = () => {
       title: "Technical Support",
       categories: ["HELPDESK", "IT SUPPORT"],
       description:
-        "Expert technical assistance for software, hardware, and IT infrastructure support.",
+        "24/7 tech support services to resolve customer issues quickly and effectively.",
     },
     {
       icon: (
@@ -108,7 +108,7 @@ const Services = () => {
       title: "Data Entry & Processing",
       categories: ["DATA ENTRY", "PROCESSING"],
       description:
-        "Accurate and efficient data management services with quality assurance.",
+        "Accurate and efficient data handling to keep your business organized and compliant.",
     },
   ];
 

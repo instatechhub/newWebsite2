@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "../hooks/use-theme";
+import logo from "../assests/logo.jpeg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,9 +65,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-foreground">
-              <span className="text-primary">L</span>ogo
-            </div>
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-10 w-auto object-contain dark:invert transition-all duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -24,7 +24,7 @@ const ContactPage = () => {
       icon: Phone,
       title: 'Call Us',
       description: 'Speak with our experts',
-      info: '+91 8120545454 BPO-CALL',
+      info: '+91 081205 45454 BPO-CALL',
       available: '24/7 Available',
       color: 'from-blue-500/20 to-blue-600/20'
     },
@@ -32,7 +32,7 @@ const ContactPage = () => {
       icon: Mail,
       title: 'Email Us',
       description: 'Send us a message',
-      info: 'support @instaconnects.in',
+      info: 'enquiry@Innovateout source.com',
       available: 'Response within 2 hours',
       color: 'from-green-500/20 to-green-600/20'
     },
@@ -40,7 +40,7 @@ const ContactPage = () => {
       icon: MapPin,
       title: 'Visit Us',
       description: 'Our office',
-      info: 'Opp- Level 3, Vijay Nagar Indore, Madhya Pradesh 452010',
+      info: '203, Mangal City Mall, Vijay Nagar Indore, Madhya Pradesh 452010',
       available: 'Mon-Fri 9AM-6PM',
       color: 'from-purple-500/20 to-purple-600/20'
     },
@@ -58,9 +58,9 @@ const ContactPage = () => {
     {
       city: 'Indore',
       country: 'INDIA',
-      address: 'Mangal City, Opp- Level 3, Vijay Nagar Indore, Madhya Pradesh 452010',
-      phone: '+91 8120545454',
-      email: 'support@instaconnects.in',
+      address: '203, Mangal City Mall, Vijay Nagar Indore, Madhya Pradesh 452010',
+      phone: '+91 081205 45454',
+      email: 'enquiry@Innovateoutsource.com',
       timezone: 'Asia/Kolkata',
       image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400&h=300&fit=crop'
     },

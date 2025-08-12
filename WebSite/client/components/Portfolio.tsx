@@ -16,7 +16,7 @@ const Portfolio = () => {
       categories: ["CALL CENTER", "CUSTOMER SUPPORT"],
       title: "Fortune 500 Customer Service",
       description:
-        "Comprehensive customer support solution handling 10,000+ daily interactions with 98% satisfaction rate.",
+        "Handled multi-lingual customer support for a Fortune 500 company, improving satisfaction by 32%",
       image:
         "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
       link: "VIEW DETAILS",
@@ -26,7 +26,7 @@ const Portfolio = () => {
       categories: ["TECHNICAL SUPPORT", "HELPDESK"],
       title: "Global Tech Support Operations",
       description:
-        "24/7 technical helpdesk services for multinational software company with multilingual support.",
+        "Delivered 24/7 tech assistance for a leading global software brand, reducing downtime significantly.",
       image:
         "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop",
       link: "VIEW DETAILS",
@@ -36,7 +36,7 @@ const Portfolio = () => {
       categories: ["DATA PROCESSING", "BACK OFFICE"],
       title: "Healthcare Data Processing",
       description:
-        "Secure data entry and processing for healthcare provider managing 1M+ patient records.",
+        "Managed sensitive healthcare data with accuracy and HIPAA compliance.",
        image:
         "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=600&fit=crop",
       link: "VIEW DETAILS",
@@ -46,7 +46,7 @@ const Portfolio = () => {
       categories: ["TELEMARKETING", "SALES"],
       title: "E-commerce Sales Campaign",
       description:
-        "High-converting outbound sales campaigns generating 300% ROI for online retail clients.",
+        "Executed successful sales campaigns, boosting online conversions by 41%.",
       image:
         "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=600&fit=crop",
       link: "VIEW DETAILS",

@@ -117,10 +117,11 @@ const About = () => {
 
             {/* Description */}
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We specialize in transforming business operations through
-              innovative outsourcing solutions. Our expertise spans customer
-              service, technical support, data entry, telemarketing, and
-              back-office operations. We serve Fortune 500 companies worldwide.
+              With a proven track record in delivering outstanding results,
+              InnovateOutsource specializes in call center operations, data
+              management, and back-office services for businesses across
+              industries. Our mission is to empower organizations with
+              cost-effective, scalable, and high-quality outsourcing solutions.
             </p>
 
             {/* Stats */}
@@ -130,16 +131,16 @@ const About = () => {
                   99.8%
                 </div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wide">
-                  SERVICE UPTIME
+                  Client Satisfaction Rate
                 </div>
               </div>
 
               <div className="space-y-2">
                 <div className="stat-number text-4xl md:text-5xl font-bold text-foreground">
-                  500+
+                  100+
                 </div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wide">
-                  GLOBAL CLIENTS
+                  Successful Projects
                 </div>
               </div>
             </div>

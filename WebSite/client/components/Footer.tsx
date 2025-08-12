@@ -6,6 +6,7 @@ import {
   Instagram,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "../assests/logo.jpeg";
 
 const Footer = () => {
   const footerLinks = {
@@ -29,10 +30,12 @@ const Footer = () => {
       <div className="container-max section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
           <div>
-            <Link to="/" className="flex items-center space-x-2 mb-6">
-              <div className="text-2xl font-bold text-foreground">
-                <span className="text-primary">L</span>ogo
-              </div>
+            <Link to="/" className="flex items-center space-x-2">
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-15 w-auto object-contain dark:invert transition-all duration-300"
+              />
             </Link>
           </div>
 
@@ -41,17 +44,17 @@ const Footer = () => {
             <div className="space-y-4">
               <div>
                 <p className="text-foreground font-medium">
-                  MangalCity, Opp- Level 3,
+                  203, Mangal City Mall
                 </p>
                 <p className="text-foreground font-medium">
-                  Vijay Nagar Indore, Madhya Pradesh 452010
+                  Vijay Nagar, Indore Madhya Pradesh – 452010, India
                 </p>
               </div>
               <div>
                 <p className="text-primary font-medium">
-                  contact@webfoliobpo.com
+                  enquiry@Innovateoutsource.com
                 </p>
-                <p className="text-primary font-medium">+91 8120545454 CALL</p>
+                <p className="text-primary font-medium">+91 081205 45454 CALL</p>
               </div>
             </div>
           </div>

@@ -9,8 +9,8 @@ const Testimonials = () => {
       id: 1,
       category: "DESIGN QUALITY",
       quote:
-        '"I have been hiring people in this space for a number of years and I have never seen this level of professionalism."',
-      name: "Haitham Al-Dukhin",
+        '"InnovateOutsource transformed our customer support process — now it’s faster, better, and more efficient!"',
+      name: "Matthew R. Dubin",
       position: "Private Customer",
       avatar:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
@@ -19,7 +19,7 @@ const Testimonials = () => {
       id: 2,
       category: "DESIGN QUALITY",
       quote:
-        '"I have been hiring people in this space for a number of years and I have never seen this level of professionalism."',
+        '"Professional team with quick response times and excellent service delivery."',
       name: "Sarah Johnson",
       position: "CEO, TechCorp",
       avatar:
@@ -29,8 +29,8 @@ const Testimonials = () => {
       id: 3,
       category: "DESIGN QUALITY",
       quote:
-        '"I have been hiring people in this space for a number of years and I have never seen this level of professionalism."',
-      name: "Michael Chen",
+        '"Their expertise in BPO operations is unmatched. Highly recommend!"',
+      name: "Michael",
       position: "Product Manager",
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",

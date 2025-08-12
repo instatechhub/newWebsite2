@@ -77,7 +77,7 @@ const Hero = () => {
                 ref={titleRef}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
               >
-                <span className="text-primary">WebFolio</span> BPO
+                <span className="text-primary">Innovate</span> Outsource
               </h1>
               <h2
                 ref={subtitleRef}
@@ -89,16 +89,16 @@ const Hero = () => {
                 ref={descriptionRef}
                 className="text-lg text-muted-foreground leading-relaxed max-w-lg"
               >
-                From customer support to data processing, we provide
-                comprehensive BPO services that drive business growth and
-                operational excellence.
+                We’re a trusted BPO partner helping global businesses streamline
+                operations, boost efficiency, and deliver exceptional customer
+                experiences — 24/7.
               </p>
             </div>
 
             {/* CTA Button */}
             <div ref={ctaRef}>
               <button className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 border border-primary/20">
-                Get Quote
+                Get Started
               </button>
             </div>
           </div>
@@ -130,21 +130,22 @@ const Hero = () => {
                       EMAIL :
                     </span>
                     <p className="text-sm font-medium">
-                      contact@webfoliobpo.com
+                      enquiry@InnovateOutsource.com
                     </p>
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground uppercase tracking-wide">
                       PHONE :
                     </span>
-                    <p className="text-sm font-medium">+1 800 BPO CALL</p>
+                    <p className="text-sm font-medium">+91 081205 45454</p>
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground uppercase tracking-wide">
                       ADDRESS :
                     </span>
                     <p className="text-sm font-medium">
-                      Business District, New York
+                      203, Mangal City Mall Vijay Nagar, Indore Madhya Pradesh –
+                      452010, India
                     </p>
                   </div>
                 </div>

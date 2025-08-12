@@ -6,7 +6,7 @@ const Blog = () => {
       id: 1,
       author: "BY - WPUSER1",
       date: "JANUARY 20, 2024",
-      title: "Design Inspiration: Where to Find Creative Ideas",
+      title: "InnovateOutsource launches AI-driven customer support system.",
       image:
         "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop",
       link: "Read More",
@@ -15,7 +15,7 @@ const Blog = () => {
       id: 2,
       author: "BY - WPUSER1",
       date: "JANUARY 20, 2024",
-      title: "Typography: Choosing Fonts for Maximum Impact",
+      title: "Partnership with a global e-commerce giant announced.",
       image:
         "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop",
       link: "Read More",
@@ -24,7 +24,7 @@ const Blog = () => {
       id: 3,
       author: "BY - WPUSER1",
       date: "JANUARY 20, 2024",
-      title: "Design Inspiration: Where to Find Creative Ideas",
+      title: "Expanding operations to 3 new international locations.",
       image:
         "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop",
       link: "Read More",
