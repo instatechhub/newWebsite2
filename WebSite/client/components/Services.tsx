@@ -21,10 +21,10 @@ const Services = () => {
           />
         </svg>
       ),
-      title: "Call Center Services",
-      categories: ["INBOUND", "OUTBOUND"],
+      title: "Inbound Services",
+      categories: ["INBOUND", "CALL CENTER"],
       description:
-        "High-quality inbound & outbound call management ensuring seamless customer communication.",
+        "High-quality inbound call management ensuring seamless customer communication.",
     },
     {
       icon: (
@@ -62,10 +62,10 @@ const Services = () => {
           />
         </svg>
       ),
-      title: "Technical Support",
-      categories: ["HELPDESK", "IT SUPPORT"],
+      title: "Outbound Services",
+      categories: ["OUTBOUND", "CALL CENTER"],
       description:
-        "24/7 tech support services to resolve customer issues quickly and effectively.",
+        "Professional outbound calling to connect, engage, and grow your business.",
     },
     {
       icon: (
@@ -107,10 +107,10 @@ const Services = () => {
           />
         </svg>
       ),
-      title: "Lead Generation",
+      title: "Chat Support Services",
       categories: ["B2B", "B2C"],
       description:
-        "Driving business growth by generating high-quality leads through targeted outreach, strategic campaigns, and market research.",
+        "At InnovateOutsource, we deliver responsive, reliable chat support to boost customer loyalty.",
     },
   ];
 

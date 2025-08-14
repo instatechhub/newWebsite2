@@ -1,79 +1,83 @@
 import { useEffect, useRef } from 'react';
-import { ArrowUpRight, Clock, Globe, Headphones, Monitor, Shield, Users, Search, Target, Zap, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, Clock, Globe, Headphones, Monitor, Shield, Users, Search, Target, Zap, TrendingUp, PhoneCall, MessageCircle, Mail, Share2 } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import PageHeader from '../components/PageHeader';
 import TopPageHeader from '../components/TopPageHeader';
+import { useNavigate } from 'react-router-dom';
+import coverImg from '../assests/Serrvices/1.jpg';
+import coverImg1 from '../assests/Serrvices/2.jpg';
+import coverImg2 from '../assests/Serrvices/3.jpg';
+import coverImg3 from '../assests/Serrvices/4.jpg';
+import coverImg4 from '../assests/Serrvices/5.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const services = [
+ {
+ id: 1,
+ icon: Headphones,
+ title: 'Inbound Services',
+ subtitle: 'Seamless Customer Connections',
+ description: 'When customers contact your business, they expect quick,effective responses. At InnovateOutsource, we ensure every call turns into anopportunity for satisfaction and loyalty.',
+ features: ['24/7 Availability', 'Multilingual Support', 'Order Processing',
+'Customer Assistance'],
+ image: coverImg,
+ stats: { agents: '20+', languages: '3+', satisfaction: '98.6%' },
+ },
+  {
+ id: 2,
+ icon: PhoneCall,
+ title: 'Outbound Services',
+ subtitle: 'Customer Retention & Engagement',
+ description: 'At InnovateOutsource, we help businesses retain and engage customers through premium outbound call center solutions. Our team of experts is dedicated to delivering exceptional service that drives results.',
+ features: ['Lead Generation', 'Customer Retention', 'Cold Calling', 'Tailored Campaigns'],
+ image: coverImg1,
+ stats: { agents: '15+', campaigns: '50+', satisfaction: '97.8%' },
+ },
+{
+ id: 3,
+ icon: MessageCircle,
+ title: 'Chat Support Services',
+ subtitle: 'Real-Time Customer Engagement',
+ description: 'At InnovateOutsource, we enhance customer experiences through responsive and reliable chat support. Our chat services help businesses boost brand loyalty, encourage word-of-mouth promotion, and increase sales.',
+ features: ['24/7 Live Chat', 'Instant Query Resolution', 'Multilingual Support',
+'Lead Conversion via Chat'],
+ image: coverImg4,
+ stats: { agents: '50+', languages: '3+', satisfaction: '97%' }
+ },
+
+  {
+ id: 4,
+ icon: Mail,
+ title: 'E-Mail Support Solutions',
+ subtitle: 'Efficient & Professional Communication',
+ description: 'Outsourcing E-mail assistance from InnovateOutsource helps clients to cater to their customers with effective solutions thus strengthening the brand equity.',
+ features: ['Timely Responses', 'Personalized Communication', 'Multilingual Email Support', 'Issue Resolution via Email'],
+ image: coverImg3,
+ stats: { agents: '8+', languages: '3+', satisfaction: '96%' }
+ },
+
+  {
+ id: 5,
+ icon: Share2,
+ title: 'Social Media Customer Support',
+ subtitle: 'Engaging & Responsive Brand Presence',
+ description: 'A brand can increase its reach over time with efficient use of resources on social platforms, thus building brand image. Social media management plays a big role in contributing to the success or decline of a brand.',
+ features: ['24/7 Social Monitoring', 'Quick Query Response', 'Brand Image Management', 'Multi-Platform Support'],
+ image: coverImg2,
+ stats: { platforms: '5+', agents: '20+', satisfaction: '98.7%' }
+ },
+
+]
 
 const ServicesPage = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const processRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
-  const services = [
-    {
-      id: 1,
-      icon: Headphones,
-      title: 'Call Center Services',
-      subtitle: 'Customer Support Excellence',
-      description: 'Comprehensive inbound and outbound call center solutions with multilingual support, ensuring exceptional customer experiences across all touchpoints.',
-      features: ['24/7 Customer Support', 'Multilingual Agents', 'Quality Assurance', 'Real-time Reporting'],
-      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop',
-      stats: { agents: '500+', languages: '15+', satisfaction: '98%' }
-    },
-    {
-      id: 2,
-      icon: Monitor,
-      title: 'Technical Support',
-      subtitle: 'Expert IT Solutions',
-      description: 'Professional technical helpdesk services providing instant resolution for complex IT issues with certified technicians and advanced troubleshooting.',
-      features: ['L1/L2/L3 Support', 'Remote Assistance', 'Ticket Management', 'SLA Compliance'],
-      image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop',
-      stats: { uptime: '99.9%', resolution: '15min', tickets: '10K+' }
-    },
-    {
-      id: 3,
-      icon: Shield,
-      title: 'Data Processing',
-      subtitle: 'Secure & Accurate',
-      description: 'High-volume data entry, processing, and management services with stringent quality controls and security protocols for sensitive information.',
-      features: ['Data Entry & Validation', 'Document Processing', 'Quality Control', 'Secure Infrastructure'],
-     image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop',
-      stats: { accuracy: '99.8%', records: '1M+', security: 'ISO 27001' }
-    },
-    {
-      id: 4,
-      icon: Users,
-      title: 'Sales & Marketing',
-      subtitle: 'Revenue Generation',
-      description: 'Strategic outbound sales campaigns, lead generation, and telemarketing services designed to maximize conversion rates and drive business growth.',
-      features: ['Lead Generation', 'Appointment Setting', 'Sales Campaigns', 'CRM Integration'],
-      image: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=600&fit=crop',
-      stats: { conversion: '25%', leads: '50K+', roi: '300%' }
-    },
-    {
-      id: 5,
-      icon: Globe,
-      title: 'Back Office Operations',
-      subtitle: 'Operational Excellence',
-      description: 'Comprehensive back-office support including finance & accounting, HR services, and administrative tasks to streamline your business operations.',
-      features: ['Finance & Accounting', 'HR Services', 'Administrative Support', 'Process Optimization'],
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
-      stats: { efficiency: '40%', processes: '100+', cost: '60%' }
-    },
-    {
-      id: 6,
-      icon: Clock,
-      title: 'Chat Support',
-      subtitle: 'Real-time Assistance',
-      description: 'Live chat support services with AI integration providing instant customer assistance and seamless escalation to human agents when needed.',
-      features: ['Live Chat Support', 'AI Integration', 'Multi-channel Support', 'Instant Response'],
-      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop',
-      stats: { response: '30sec', satisfaction: '95%', chats: '25K+' }
-    }
-  ];
+
 
   const processSteps = [
     {
@@ -174,13 +178,13 @@ const ServicesPage = () => {
 
       {/* Page Header */}
       <PageHeader
-        title="COMPREHENSIVE BPO SOLUTIONS"
+        title="ALL IN ONE BPO SOLUTIONS"
         subtitle="OUR SERVICES"
-        description="From customer support to data processing, we provide end-to-end business process outsourcing solutions that drive efficiency, reduce costs, and accelerate your business growth."
+        description="From customer support to data processing, we deliver end-to-end outsourcing solutions that boost efficiency, cut costs, and support your growth journey."
         stats={[
-          { value: '500+', label: 'Clients Served' },
-          { value: '15+', label: 'Years Experience' },
-          { value: '99.8%', label: 'Success Rate' }
+          { value: '20+', label: 'Clients Served' },
+          { value: '1+', label: 'Years in Operation' },
+          { value: '98.9%', label: 'Client Satisfaction Rate' }
         ]}
       />
 
@@ -244,10 +248,10 @@ const ServicesPage = () => {
 
                       {/* Learn More Button */}
                       <div className="mt-6">
-                        <button className="w-full glass-button inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-foreground rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        {/* <button className="w-full glass-button inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-foreground rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                           Learn More
                           <ArrowUpRight className="ml-2 h-4 w-4" />
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -306,13 +310,12 @@ const ServicesPage = () => {
               that drives efficiency and accelerates growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-full hover:scale-105 transition-transform">
+              <button className="glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-full hover:scale-105 transition-transform"
+                onClick={() => navigate('/contact')}>
                 Get Custom Quote
                 <ArrowUpRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-border text-foreground px-8 py-4 rounded-full hover:bg-card transition-colors">
-                Schedule Consultation
-              </button>
+              
             </div>
           </div>
         </div>

@@ -3,25 +3,9 @@ import { ArrowUpRight, ChevronDown, HelpCircle, MessageCircle, Phone, Search } f
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TopPageHeader from '../components/TopPageHeader';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const FAQPage = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const faqRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [openAccordions, setOpenAccordions] = useState<Set<number>>(new Set());
-
-  const categories = [
-    { id: 'all', label: 'All Questions', count: 24 },
-    { id: 'services', label: 'Services', count: 8 },
-    { id: 'pricing', label: 'Pricing', count: 6 },
-    { id: 'support', label: 'Support', count: 5 },
-    { id: 'security', label: 'Security', count: 5 }
-  ];
-
   const faqs = [
     {
       id: 1,
@@ -129,6 +113,25 @@ const FAQPage = () => {
       popular: false
     }
   ];
+
+const FAQPage = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [openAccordions, setOpenAccordions] = useState<Set<number>>(new Set());
+  const navigate = useNavigate();
+
+  const categories = [
+    { id: 'all', label: 'All Questions', count: faqs.length },
+    { id: 'services', label: 'Services', count: faqs.filter(faq => faq.category === 'services').length },
+    { id: 'pricing', label: 'Pricing', count: faqs.filter(faq => faq.category === 'pricing').length },
+    { id: 'support', label: 'Support', count: faqs.filter(faq => faq.category === 'support').length },
+    { id: 'security', label: 'Security', count: faqs.filter(faq => faq.category === 'security').length },
+  ];
+
+
 
   const filteredFAQs = faqs.filter(faq => {
     const matchesCategory = activeCategory === 'all' || faq.category === activeCategory;
@@ -248,11 +251,11 @@ const FAQPage = () => {
                 <div className="text-muted-foreground text-sm">Support Available</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">15+</div>
+                <div className="text-3xl font-bold text-primary mb-2">5+</div>
                 <div className="text-muted-foreground text-sm">Languages Supported</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                <div className="text-3xl font-bold text-primary mb-2">20+</div>
                 <div className="text-muted-foreground text-sm">Happy Clients</div>
               </div>
             </div>
@@ -403,7 +406,7 @@ const FAQPage = () => {
                 <h3 className="text-xl font-bold mb-4">Call Us</h3>
                 <p className="text-muted-foreground mb-4">Speak directly with our experts</p>
                 <button className="text-primary font-medium hover:underline">
-                  +1 (800) BPO-CALL
+                  +91 081205 45454
                 </button>
               </div>
 
@@ -411,10 +414,10 @@ const FAQPage = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <MessageCircle className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Live Chat</h3>
-                <p className="text-muted-foreground mb-4">Get instant answers online</p>
+                <h3 className="text-xl font-bold mb-4">Email Us</h3>
+                <p className="text-muted-foreground mb-4">Get instant answers within 2 hours</p>
                 <button className="text-primary font-medium hover:underline">
-                  Start Chat
+                  enquiry @Innovateoutsource.com
                 </button>
               </div>
 
@@ -424,20 +427,24 @@ const FAQPage = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Support Center</h3>
                 <p className="text-muted-foreground mb-4">Browse our knowledge base</p>
-                <button className="text-primary font-medium hover:underline">
+                <button className="text-primary font-medium hover:underline"
+                onClick={() => navigate('/contact')}
+                >
                   Visit Center
                 </button>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-full hover:scale-105 transition-transform">
+              <button className="glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-full hover:scale-105 transition-transform"
+               onClick={() => navigate('/contact')}
+              >
                 Contact Support
                 <ArrowUpRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-border text-foreground px-8 py-4 rounded-full hover:bg-card transition-colors">
+              {/* <button className="border border-border text-foreground px-8 py-4 rounded-full hover:bg-card transition-colors">
                 Schedule Consultation
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

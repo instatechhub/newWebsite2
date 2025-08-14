@@ -1,6 +1,8 @@
 import { Sparkle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-24 bg-gradient-to-b from-neutral-900/30 to-background overflow-hidden relative">
       <div className="container-max section-padding">
@@ -91,7 +93,9 @@ const Contact = () => {
 
         {/* Contact Button */}
         <div className="text-center mt-12 relative z-20">
-          <button className="inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-2xl shadow-primary/25">
+          <button className="inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-2xl shadow-primary/25"
+            onClick={() => navigate("/contact")}
+          >
             Let’s Make Progress
           </button>
         </div>

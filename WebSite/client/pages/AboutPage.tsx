@@ -1,9 +1,19 @@
-import { useEffect, useRef } from 'react';
-import { ArrowUpRight, Award, Clock, Globe, Shield, Star, Users } from 'lucide-react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import PageHeader from '../components/PageHeader';
-import TopPageHeader from '../components/TopPageHeader';
+import { useEffect, useRef } from "react";
+import {
+  ArrowUpRight,
+  Award,
+  CheckCircle,
+  Clock,
+  Globe,
+  Shield,
+  Star,
+  Users,
+} from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import PageHeader from "../components/PageHeader";
+import TopPageHeader from "../components/TopPageHeader";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,93 +22,189 @@ const AboutPage = () => {
   const statsRef = useRef<HTMLDivElement>(null);
   const valuesRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const stats = [
-    { icon: Users, label: 'Happy Clients', value: '500+', description: 'Global enterprises trust us' },
-    { icon: Globe, label: 'Countries Served', value: '25+', description: 'Worldwide operations' },
-    { icon: Clock, label: 'Years Experience', value: '15+', description: 'Industry expertise' },
-    { icon: Award, label: 'Success Rate', value: '99.8%', description: 'Project completion' },
+    {
+      icon: Users,
+      label: "Happy Clients",
+      value: "20+",
+      description: "Outsourcing Solutions",
+    },
+    {
+      icon: Globe,
+      label: "Cities Served",
+      value: "5+",
+      description: "Multiples Regions",
+    },
+    {
+      icon: Clock,
+      label: "Years in Operation",
+      value: "1+",
+      description: "Industry expertise",
+    },
+    {
+      icon: Award,
+      label: "Success Rate",
+      value: "98.9%",
+      description: "Project completion",
+    },
   ];
 
   const values = [
     {
       icon: Shield,
-      title: 'Security & Compliance',
-      description: 'We maintain the highest standards of data security and regulatory compliance across all operations.',
-      features: ['ISO 27001 Certified', 'GDPR Compliant', 'SOC 2 Type II', '24/7 Security Monitoring']
+      title: "Experienced & Qualified Staff",
+      description:
+        "Our dedicated team of trained professionals delivers top-quality service, combining skill, efficiency, and a customer-first approach.",
+      features: [
+        "Industry-Certified Experts ",
+        "Continuous Training ",
+        "Proven Track Record ",
+        "Reliable & Efficient ",
+      ],
     },
     {
       icon: Star,
-      title: 'Quality Excellence',
-      description: 'Our commitment to quality ensures exceptional results in every project we undertake.',
-      features: ['Six Sigma Processes', 'Quality Assurance', 'Continuous Improvement', 'Performance Metrics']
+      title: "24/7 Customer Support",
+      description:
+        "We offer round-the-clock support, enabling seamless communication and quick resolution of customer queries at any time.",
+      features: [
+        "Instant Response Time ",
+        "Multi-Channel Assistance",
+        "Expert Support Team",
+      ],
     },
     {
       icon: Users,
-      title: 'Expert Team',
-      description: 'Our skilled professionals bring years of experience and domain expertise to your projects.',
-      features: ['Certified Professionals', 'Multilingual Support', 'Industry Specialists', 'Continuous Training']
+      title: "Foreign Language Support",
+      description:
+        "With multilingual experts, we help you connect with global customers and clients through clear and effective communication",
+      features: [
+        "Multilingual Experts ",
+        "Cultural Understanding ",
+        "Seamless Global Support ",
+        "Improved Customer Experience",
+      ],
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'With operations across multiple time zones, we provide round-the-clock service coverage.',
-      features: ['24/7 Operations', 'Multiple Locations', 'Cultural Expertise', 'Local Knowledge']
-    }
+      icon: CheckCircle,
+      title: "Reliable & Secure Operations",
+      description:
+        "We prioritize the security and reliability of every interaction, ensuring data protection and uninterrupted service delivery.",
+      features: [
+        "Robust Data Security",
+        "Consistent Service Quality",
+        "Proactive Issue Resolution",
+        "High Uptime Guarantee",
+      ],
+    },
   ];
 
   const timeline = [
     {
-      year: '2008',
-      title: 'Company Founded',
-      description: 'Started as a small call center with 50 agents serving local businesses.',
-      milestone: 'First 100 clients'
+      year: "Hiring Process",
+      title: "Talent Sourcing",
+      description:
+        "Finding and attracting skilled candidates from various sources.",
+      milestone: "Step 1",
     },
     {
-      year: '2012',
-      title: 'Global Expansion',
-      description: 'Expanded operations to serve international markets with multilingual support.',
-      milestone: 'Opened 3 new centers'
+      year: "Hiring Process",
+      title: "Screening & Shortlisting",
+      description:
+        "Reviewing applications and selecting the best candidates for the next stage.",
+      milestone: "Step 2",
     },
     {
-      year: '2016',
-      title: 'Technology Integration',
-      description: 'Implemented AI and automation to enhance service delivery and efficiency.',
-      milestone: 'Digital transformation'
+      year: "Hiring Process",
+      title: "Assessment & Evaluation",
+      description:
+        "Testing skills, competencies, and cultural fit through assessments.",
+      milestone: "Step 3",
     },
     {
-      year: '2020',
-      title: 'Remote Solutions',
-      description: 'Launched work-from-home capabilities and cloud-based solutions.',
-      milestone: 'Remote-first operations'
+      year: "Hiring Process",
+      title: "Final Selection & Offer",
+      description: "Choosing the right candidate and extending the job offer.",
+      milestone: "Step 4",
     },
     {
-      year: '2024',
-      title: 'Industry Leader',
-      description: 'Recognized as a leading BPO provider with 500+ global clients.',
-      milestone: 'Market leadership'
-    }
+      year: "Training & Development",
+      title: "Onboarding",
+      description:
+        "Introducing new hires to company policies, culture, and tools.",
+      milestone: "Step 5",
+    },
+    {
+      year: "Training & Development",
+      title: "Process Training",
+      description:
+        "Educating employees on workflows, procedures, and best practices.",
+      milestone: "Step 6",
+    },
+    {
+      year: "Training & Development",
+      title: "Soft Skills Training",
+      description:
+        "Enhancing communication, teamwork, and problem-solving abilities.",
+      milestone: "Step 7",
+    },
+    {
+      year: "Training & Development",
+      title: "Compliance & Quality Assurance",
+      description:
+        "Ensuring adherence to regulations and maintaining high quality standards.",
+      milestone: "Step 8",
+    },
+    {
+      year: "Training & Development",
+      title: "Continuous Learning",
+      description: "Promoting ongoing education and professional growth.",
+      milestone: "Step 9",
+    },
+    {
+      year: "Performance Monitoring & Support",
+      title: "Tracking KPIs",
+      description: "Monitoring key performance indicators to measure success.",
+      milestone: "Step 10",
+    },
+    {
+      year: "Performance Monitoring & Support",
+      title: "Coaching & Feedback",
+      description: "Providing guidance and constructive feedback to employees.",
+      milestone: "Step 11",
+    },
+    {
+      year: "Performance Monitoring & Support",
+      title: "Career Growth Opportunities",
+      description:
+        "Creating pathways for professional advancement and promotions.",
+      milestone: "Step 12",
+    },
   ];
 
   useEffect(() => {
     // Hero animation
     if (heroRef.current) {
-      gsap.fromTo(heroRef.current.children,
+      gsap.fromTo(
+        heroRef.current.children,
         { y: 100, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           duration: 1.2,
           stagger: 0.2,
-          ease: "power3.out"
-        }
+          ease: "power3.out",
+        },
       );
     }
 
     // Stats animation
     if (statsRef.current) {
-      const statCards = statsRef.current.querySelectorAll('.stat-card');
-      gsap.fromTo(statCards,
+      const statCards = statsRef.current.querySelectorAll(".stat-card");
+      gsap.fromTo(
+        statCards,
         { y: 80, opacity: 0, scale: 0.8 },
         {
           y: 0,
@@ -110,39 +216,40 @@ const AboutPage = () => {
           scrollTrigger: {
             trigger: statsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
 
       // Animate numbers
-      const statNumbers = statsRef.current.querySelectorAll('.stat-number');
+      const statNumbers = statsRef.current.querySelectorAll(".stat-number");
       statNumbers.forEach((element) => {
-        const finalText = element.textContent || '';
+        const finalText = element.textContent || "";
         const numMatch = finalText.match(/[\d.]+/);
         if (numMatch) {
           const finalNumber = parseFloat(numMatch[0]);
-          const hasPlus = finalText.includes('+');
-          const hasPercent = finalText.includes('%');
+          const hasPlus = finalText.includes("+");
+          const hasPercent = finalText.includes("%");
 
-          gsap.fromTo(element,
+          gsap.fromTo(
+            element,
             { textContent: 0 },
             {
               textContent: finalNumber,
               duration: 2,
               ease: "power2.out",
               snap: { textContent: hasPercent ? 0.1 : 1 },
-              onUpdate: function() {
+              onUpdate: function () {
                 const current = parseFloat(this.targets()[0].textContent);
-                const suffix = hasPercent ? '%' : hasPlus ? '+' : '';
+                const suffix = hasPercent ? "%" : hasPlus ? "+" : "";
                 element.textContent = `${hasPercent ? current.toFixed(1) : Math.round(current)}${suffix}`;
               },
               scrollTrigger: {
                 trigger: element,
                 start: "top 85%",
-                toggleActions: "play none none reverse"
-              }
-            }
+                toggleActions: "play none none reverse",
+              },
+            },
           );
         }
       });
@@ -150,8 +257,9 @@ const AboutPage = () => {
 
     // Values animation
     if (valuesRef.current) {
-      const valueCards = valuesRef.current.querySelectorAll('.value-card');
-      gsap.fromTo(valueCards,
+      const valueCards = valuesRef.current.querySelectorAll(".value-card");
+      gsap.fromTo(
+        valueCards,
         { x: -100, opacity: 0 },
         {
           x: 0,
@@ -162,16 +270,18 @@ const AboutPage = () => {
           scrollTrigger: {
             trigger: valuesRef.current,
             start: "top 70%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }
 
     // Timeline animation
     if (timelineRef.current) {
-      const timelineItems = timelineRef.current.querySelectorAll('.timeline-item');
-      gsap.fromTo(timelineItems,
+      const timelineItems =
+        timelineRef.current.querySelectorAll(".timeline-item");
+      gsap.fromTo(
+        timelineItems,
         { x: 100, opacity: 0 },
         {
           x: 0,
@@ -182,34 +292,31 @@ const AboutPage = () => {
           scrollTrigger: {
             trigger: timelineRef.current,
             start: "top 70%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
       {/* Top Page Header */}
-      <TopPageHeader
-        title="ABOUT US"
-        breadcrumb={['Home', 'About Us']}
-      />
+      <TopPageHeader title="ABOUT US" breadcrumb={["Home", "About Us"]} />
 
       {/* Page Header */}
       <PageHeader
         title="WE'RE TRANSFORMING BUSINESS OPERATIONS"
         subtitle="ABOUT US"
-        description="For over 15 years, we've been the trusted partner for businesses seeking exceptional BPO solutions. Our commitment to excellence, innovation, and client success has made us a global leader in the industry."
+        description="We’re a fast-growing BPO partner helping businesses streamline operations and deliver better customer experiences. With a focus on quality, innovation, and results, we aim to make outsourcing simple, effective, and growth-driven."
         stats={[
-          { value: '500+', label: 'Team Members' },
-          { value: '25+', label: 'Countries' },
-          { value: '15+', label: 'Years Experience' }
+          { value: "20+", label: "Team Members" },
+          { value: "5+", label: "Cities" },
+          { value: "1+", label: "Years in Operation" },
         ]}
       />
 
@@ -250,11 +357,12 @@ const AboutPage = () => {
               OUR VALUES
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              What Sets Us <span className="text-primary">Apart</span>
+              Call Center <span className="text-primary">Solutions</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our core values drive everything we do, ensuring exceptional service delivery 
-              and long-term partnerships with our clients.
+              InnovateOutsource delivers efficient, customized solutions for
+              customer support, lead generation, and improving your business
+              communication strategies.
             </p>
           </div>
 
@@ -269,11 +377,18 @@ const AboutPage = () => {
                         <IconComponent className="h-8 w-8 text-primary" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
-                        <p className="text-muted-foreground mb-6">{value.description}</p>
+                        <h3 className="text-2xl font-bold mb-4">
+                          {value.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-6">
+                          {value.description}
+                        </p>
                         <ul className="space-y-2">
                           {value.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                            <li
+                              key={idx}
+                              className="flex items-center text-sm text-muted-foreground"
+                            >
                               <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
                               {feature}
                             </li>
@@ -290,44 +405,58 @@ const AboutPage = () => {
       </section>
 
       {/* Timeline Section */}
-      <section ref={timelineRef} className="py-24 bg-gradient-to-br from-card/30 to-background">
+      <section
+        ref={timelineRef}
+        className="py-24 bg-gradient-to-br from-card/30 to-background"
+      >
         <div className="container-max section-padding">
           <div className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wide text-sm mb-4 block">
-              OUR JOURNEY
+              GROWTH & SUCCESS PATH
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-primary">Milestones</span> of Excellence
+              <span className="text-primary">From Hiring to </span> Performance
+              Excellence
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From humble beginnings to industry leadership, discover the key moments 
-              that shaped our journey to becoming a global BPO leader.
+              From attracting top talent to empowering them through training and
+              continuous support, our structured process ensures lasting growth
+              for both individuals and the organization.
             </p>
           </div>
 
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-primary/50 via-primary to-primary/50"></div>
-            
+
             <div className="space-y-12">
               {timeline.map((item, index) => (
-                <div key={index} className={`timeline-item flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
+                <div
+                  key={index}
+                  className={`timeline-item flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                >
+                  <div
+                    className={`w-1/2 ${index % 2 === 0 ? "pr-8 text-right" : "pl-8"}`}
+                  >
                     <div className="glass-morphism rounded-2xl p-6">
-                      <div className="text-2xl font-bold text-primary mb-2">{item.year}</div>
+                      <div className="text-2xl font-bold text-primary mb-2">
+                        {item.year}
+                      </div>
                       <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                      <p className="text-muted-foreground mb-4">{item.description}</p>
+                      <p className="text-muted-foreground mb-4">
+                        {item.description}
+                      </p>
                       <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
                         {item.milestone}
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Timeline Node */}
                   <div className="relative z-10">
                     <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
                   </div>
-                  
+
                   <div className="w-1/2"></div>
                 </div>
               ))}
@@ -341,20 +470,25 @@ const AboutPage = () => {
         <div className="container-max section-padding">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Partner with <span className="text-primary">Industry Leaders?</span>
+              Ready to Partner
+              <span className="text-primary"> with Growth Experts?</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Join 500+ global companies who trust us with their most critical business processes. 
-              Let's discuss how we can help transform your operations.
+              Join innovative startups and ambitious businesses that trust us to
+              handle their most critical operations. Let’s discuss how we can
+              help scale your vision to the next level.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-full hover:scale-105 transition-transform">
+              <button
+                className="glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-full hover:scale-105 transition-transform"
+                onClick={() => navigate("/contact")}
+              >
                 Start Your Project
                 <ArrowUpRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-border text-foreground px-8 py-4 rounded-full hover:bg-card transition-colors">
+              {/* <button className="border border-border text-foreground px-8 py-4 rounded-full hover:bg-card transition-colors">
                 Schedule Consultation
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

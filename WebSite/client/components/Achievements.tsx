@@ -2,7 +2,7 @@ const Achievements = () => {
 const skills = [
   {
     name: "Inbound Calls",
-    percentage: 95,
+    percentage: 50,
     icon: (
       <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
         <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.84.74a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.34.25 2.64.74 3.84a1 1 0 01-.21 1.11l-2.2 2.2z" />
@@ -12,7 +12,7 @@ const skills = [
   },
   {
     name: "Outbound Calls",
-    percentage: 90,
+    percentage: 25,
     icon: (
       <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm1 14.5h-2v-2h2zm0-4h-2V7h2z" />
@@ -22,7 +22,7 @@ const skills = [
   },
   {
     name: "Email Support",
-    percentage: 88,
+    percentage: 5,
     icon: (
       <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z" />
@@ -31,28 +31,8 @@ const skills = [
     color: "#4ECDC4",
   },
   {
-    name: "Chat Support",
-    percentage: 85,
-    icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M21 6h-18a1 1 0 00-1 1v12l4-4h15a1 1 0 001-1V7a1 1 0 00-1-1z" />
-      </svg>
-    ),
-    color: "#FFD93D",
-  },
-  {
-    name: "Social Media Support",
-    percentage: 80,
-    icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm5 15h-2v-5h-3v-2h3V9h2v3h3v2h-3z" />
-      </svg>
-    ),
-    color: "#21759B",
-  },
-  {
     name: "Lead Generation",
-    percentage: 87,
+    percentage: 10,
     icon: (
       <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
         <path d="M5 3h14a2 2 0 012 2v16l-7-5-7 5V5a2 2 0 012-2z" />
@@ -60,6 +40,18 @@ const skills = [
     ),
     color: "#FF9500",
   },
+  {
+    name: "Chat Support",
+    percentage: 5,
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 6h-18a1 1 0 00-1 1v12l4-4h15a1 1 0 001-1V7a1 1 0 00-1-1z" />
+      </svg>
+    ),
+    color: "#FFD93D",
+  },
+
+  
 ];
 
 
@@ -69,9 +61,9 @@ const skills = [
         {/* Header */}
         <div className="text-center mb-4">
           <p className="text-muted-foreground text-sm">
-            More than{" "}
-            <span className="text-primary font-semibold">200+ companies</span>{" "}
-            trusted us worldwide
+            Empowering {" "}
+            <span className="text-primary font-semibold">Businesses</span>{" "}
+            Innovative Solutions 
           </p>
         </div>
 
@@ -86,7 +78,7 @@ const skills = [
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
             <div key={index} className="text-center">
               {/* Icon Circle */}

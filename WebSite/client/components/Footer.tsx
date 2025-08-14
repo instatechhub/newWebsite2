@@ -15,6 +15,7 @@ const Footer = () => {
       { name: "Services", href: "/services" },
       { name: "Blog", href: "/blog" },
       { name: "Contact", href: "/contact" },
+      { name: "FAQs", href: "/faq" },
     ],
   };
 
@@ -44,7 +45,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div>
                 <p className="text-foreground font-medium">
-                301, Mangal City Mall
+                  301, Mangal City Mall
                 </p>
                 <p className="text-foreground font-medium">
                   Vijay Nagar, Indore Madhya Pradesh – 452010, India
@@ -54,7 +55,9 @@ const Footer = () => {
                 <p className="text-primary font-medium">
                   enquiry@Innovateoutsource.com
                 </p>
-                <p className="text-primary font-medium">+91 081205 45454 CALL</p>
+                <p className="text-primary font-medium">
+                  +91 081205 45454 CALL
+                </p>
               </div>
             </div>
           </div>

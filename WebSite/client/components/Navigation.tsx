@@ -30,19 +30,19 @@ const Navigation = () => {
       name: "SERVICES",
       href: "/services",
     },
-    {
-      name: "PAGES",
-      href: "#",
-      dropdown: [
-        { name: "Team", href: "/team" },
-        { name: "FAQ", href: "/faq" },
-      ],
-    },
+    // {
+    //   name: "PAGES",
+    //   href: "#",
+    //   dropdown: [
+    //     { name: "Team", href: "/team" },
+    //     { name: "FAQ", href: "/faq" },
+    //   ],
+    // },
     // {
     //   name: "BLOGS",
     //   href: "/blogs",
     // },
-    { name: "About Us", href: "/about" },
+    { name: "ABOUT US", href: "/about" },
 
     {
       name: "CONTACT US",

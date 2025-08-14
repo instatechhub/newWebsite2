@@ -3,6 +3,7 @@ import { ArrowUpRight, Award, Linkedin, Mail, MapPin, Twitter, Target, Handshake
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TopPageHeader from '../components/TopPageHeader';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +13,7 @@ const TeamPage = () => {
   const departmentsRef = useRef<HTMLDivElement>(null);
   const cultureRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState('leadership');
+  const navigate = useNavigate();
 
   const leadership = [
     {
@@ -215,15 +217,15 @@ const TeamPage = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                <div className="text-4xl font-bold text-primary mb-2">20+</div>
                 <div className="text-muted-foreground">Team Members</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">25+</div>
-                <div className="text-muted-foreground">Countries</div>
+                <div className="text-4xl font-bold text-primary mb-2">5+</div>
+                <div className="text-muted-foreground">Cities</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                <div className="text-4xl font-bold text-primary mb-2">5+</div>
                 <div className="text-muted-foreground">Languages</div>
               </div>
               <div className="text-center">
@@ -444,11 +446,12 @@ const TeamPage = () => {
               We offer competitive benefits, growth opportunities, and a collaborative work environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-full hover:scale-105 transition-transform">
+              {/* <button className="glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-full hover:scale-105 transition-transform">
                 View Open Positions
                 <ArrowUpRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-border text-foreground px-8 py-4 rounded-full hover:bg-card transition-colors">
+              </button> */}
+              <button className="border border-border text-foreground px-8 py-4 rounded-full hover:bg-card transition-colors"
+                onClick={() => navigate('/contact')} >
                 Learn About Benefits
               </button>
             </div>

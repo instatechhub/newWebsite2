@@ -2,6 +2,10 @@ import { useEffect, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import img1 from "../assests/1.jpeg"
+import img2 from "../assests/2.jpeg"
+import img3 from "../assests/3.jpeg"
+
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -17,8 +21,7 @@ const Portfolio = () => {
       title: "Comprehensive Service Solutions",
       description:
         "From inbound and outbound call handling to email, chat, and social media support, we help you connect with customers across every channel.",
-      image:
-        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
+      image:img1,
     },
     {
       id: 2,
@@ -26,8 +29,7 @@ const Portfolio = () => {
       title: "Highly Skilled Professional Team",
       description:
         "We hire and train top talent to deliver unmatched service quality while fostering a professional and supportive work culture",
-      image:
-        "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop",
+      image:img2,
     },
     {
       id: 3,
@@ -35,8 +37,7 @@ const Portfolio = () => {
       title: "Supportive and Growth Culture",
       description:
         "Our team thrives in an environment that encourages growth, values contributions, and supports career advancement at all levels.",
-      image:
-        "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=600&fit=crop",
+      image:img3,
     },
   ];
 
