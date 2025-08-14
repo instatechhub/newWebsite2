@@ -316,7 +316,7 @@ const AboutPage = () => {
         stats={[
           { value: "20+", label: "Team Members" },
           { value: "5+", label: "Cities" },
-          { value: "1+", label: "Years in Operation" },
+          { value: "5+", label: "Years in Operation" },
         ]}
       />
 
