@@ -1,4 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
+import img1 from "../assests/blog-post-img-1.png";
+import img2 from "../assests/blog-post-img-2.png";
+
 
 const Blog = () => {
   const articles = [
@@ -7,8 +10,7 @@ const Blog = () => {
       author: "BY - WPUSER1",
       date: "JANUARY 20, 2024",
       title: "InnovateOutsource launches AI-driven customer support system.",
-      image:
-        "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop",
+      image:img1,
       link: "Read More",
     },
     {
@@ -17,7 +19,7 @@ const Blog = () => {
       date: "JANUARY 20, 2024",
       title: "Partnership with a global e-commerce giant announced.",
       image:
-        "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop",
+       img2,
       link: "Read More",
     },
     {

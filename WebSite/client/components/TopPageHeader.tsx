@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
+import backGraoundImage from '../assests/banner1.png';
 
 interface TopPageHeaderProps {
   title: string;
@@ -35,7 +36,7 @@ const TopPageHeader = ({ title, breadcrumb }: TopPageHeaderProps) => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&h=600&fit=crop&crop=center')`
+          backgroundImage: `url('${backGraoundImage}')`,
         }}
       >
         {/* Dark Overlay */}
