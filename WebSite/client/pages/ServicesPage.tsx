@@ -183,7 +183,7 @@ const ServicesPage = () => {
         description="From customer support to data processing, we deliver end-to-end outsourcing solutions that boost efficiency, cut costs, and support your growth journey."
         stats={[
           { value: '20+', label: 'Clients Served' },
-          { value: '1+', label: 'Years in Operation' },
+          { value: '5+', label: 'Years in Operation' },
           { value: '98.9%', label: 'Client Satisfaction Rate' }
         ]}
       />
