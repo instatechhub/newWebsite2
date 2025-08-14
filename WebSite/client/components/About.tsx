@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Img from "../assests/image1.jpg";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,7 +80,7 @@ const About = () => {
               {/* Main Circular Image */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-border/20">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
+                  src={Img}
                   alt="About me"
                   className="w-full h-full object-cover"
                 />
@@ -107,40 +109,37 @@ const About = () => {
                 ABOUT US
               </span>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                We're a{" "}
-                <span className="text-primary">Leading BPO Company</span>{" "}
-                providing comprehensive{" "}
-                <span className="text-primary">Call Center Solutions</span> from
+                Helping {" "}
+                <span className="text-primary">Businesses Grow</span>{" "}
+                Smart Outsourcing {" "}
+                <span className="text-primary">Solutions</span> from
                 global locations.
               </h2>
             </div>
 
             {/* Description */}
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With a proven track record in delivering outstanding results,
-              InnovateOutsource specializes in call center operations, data
-              management, and back-office services for businesses across
-              industries. Our mission is to empower organizations with
-              cost-effective, scalable, and high-quality outsourcing solutions.
+             InnovateOutsource, we bring innovation and efficiency together to redefine outsourcing solutions. With a global delivery model, we empower businesses to scale faster, serve better, and achieve sustainable growth.
+
             </p>
 
             {/* Stats */}
             <div ref={statsRef} className="grid grid-cols-2 gap-8 pt-8">
               <div className="space-y-2">
                 <div className="stat-number text-4xl md:text-5xl font-bold text-foreground">
-                  99.8%
+                  100+
                 </div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wide">
-                  Client Satisfaction Rate
+                  Team Size
                 </div>
               </div>
 
               <div className="space-y-2">
                 <div className="stat-number text-4xl md:text-5xl font-bold text-foreground">
-                  100+
+                  99%
                 </div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wide">
-                  Successful Projects
+                  Operational Uptime
                 </div>
               </div>
             </div>

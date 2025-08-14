@@ -40,7 +40,7 @@ const ContactPage = () => {
       icon: MapPin,
       title: 'Visit Us',
       description: 'Our office',
-      info: '203, Mangal City Mall, Vijay Nagar Indore, Madhya Pradesh 452010',
+      info: '301, Mangal City Mall, Vijay Nagar Indore, Madhya Pradesh 452010',
       available: 'Mon-Fri 9AM-6PM',
       color: 'from-purple-500/20 to-purple-600/20'
     },
@@ -58,7 +58,7 @@ const ContactPage = () => {
     {
       city: 'Indore',
       country: 'INDIA',
-      address: '203, Mangal City Mall, Vijay Nagar Indore, Madhya Pradesh 452010',
+      address: '301, Mangal City Mall, Vijay Nagar Indore, Madhya Pradesh 452010',
       phone: '+91 081205 45454',
       email: 'enquiry@Innovateoutsource.com',
       timezone: 'Asia/Kolkata',

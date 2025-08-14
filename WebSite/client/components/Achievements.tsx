@@ -1,66 +1,67 @@
 const Achievements = () => {
-  const skills = [
-    {
-      name: "UI/UX Design",
-      percentage: 95,
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" />
-        </svg>
-      ),
-      color: "#FF6B47",
-    },
-    {
-      name: "Development",
-      percentage: 90,
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-        </svg>
-      ),
-      color: "#6B73FF",
-    },
-    {
-      name: "Graphic Design",
-      percentage: 85,
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17M2 12L12 17L22 12" />
-        </svg>
-      ),
-      color: "#4ECDC4",
-    },
-    {
-      name: "Sketch",
-      percentage: 84,
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17M2 12L12 17L22 12" />
-        </svg>
-      ),
-      color: "#FFD93D",
-    },
-    {
-      name: "WordPress",
-      percentage: 78,
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.109m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.135-2.85-.135-.584-.031-.661.854-.063.899 0 0 .584.075 1.207.105l1.796 4.925-2.522 7.555-4.196-12.48c.649-.03 1.243-.105 1.243-.105.585-.075.519-.93-.065-.899 0 0-1.759.135-2.88.135-.2 0-.438-.008-.69-.015C4.708 2.708 8.094 1.244 11.896 1.244c2.8 0 5.344 1.077 7.241 2.839-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.889 1.643.889 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014z" />
-        </svg>
-      ),
-      color: "#21759B",
-    },
-    {
-      name: "Graphic Design",
-      percentage: 85,
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17M2 12L12 17L22 12" />
-        </svg>
-      ),
-      color: "#FF9500",
-    },
-  ];
+const skills = [
+  {
+    name: "Inbound Calls",
+    percentage: 95,
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.84.74a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.34.25 2.64.74 3.84a1 1 0 01-.21 1.11l-2.2 2.2z" />
+      </svg>
+    ),
+    color: "#FF6B47",
+  },
+  {
+    name: "Outbound Calls",
+    percentage: 90,
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm1 14.5h-2v-2h2zm0-4h-2V7h2z" />
+      </svg>
+    ),
+    color: "#6B73FF",
+  },
+  {
+    name: "Email Support",
+    percentage: 88,
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z" />
+      </svg>
+    ),
+    color: "#4ECDC4",
+  },
+  {
+    name: "Chat Support",
+    percentage: 85,
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 6h-18a1 1 0 00-1 1v12l4-4h15a1 1 0 001-1V7a1 1 0 00-1-1z" />
+      </svg>
+    ),
+    color: "#FFD93D",
+  },
+  {
+    name: "Social Media Support",
+    percentage: 80,
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm5 15h-2v-5h-3v-2h3V9h2v3h3v2h-3z" />
+      </svg>
+    ),
+    color: "#21759B",
+  },
+  {
+    name: "Lead Generation",
+    percentage: 87,
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M5 3h14a2 2 0 012 2v16l-7-5-7 5V5a2 2 0 012-2z" />
+      </svg>
+    ),
+    color: "#FF9500",
+  },
+];
+
 
   return (
     <section className="py-24 bg-gradient-to-b from-neutral-900/30 to-background">

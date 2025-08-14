@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div>
                 <p className="text-foreground font-medium">
-                  203, Mangal City Mall
+                301, Mangal City Mall
                 </p>
                 <p className="text-foreground font-medium">
                   Vijay Nagar, Indore Madhya Pradesh – 452010, India

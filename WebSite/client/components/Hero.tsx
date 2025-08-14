@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import { Hand } from "lucide-react";
 import { gsap } from "gsap";
+import { useNavigate } from "react-router-dom";
+import heroImg from "../assests/about-us.jpg";
+
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -9,6 +12,7 @@ const Hero = () => {
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.3 });
@@ -83,21 +87,25 @@ const Hero = () => {
                 ref={subtitleRef}
                 className="text-2xl md:text-3xl font-semibold text-foreground"
               >
-                Leading Call Center & BPO Solutions
+                Where Innovation Meets Outsourcing Excellence.
               </h2>
               <p
                 ref={descriptionRef}
                 className="text-lg text-muted-foreground leading-relaxed max-w-lg"
               >
-                We’re a trusted BPO partner helping global businesses streamline
-                operations, boost efficiency, and deliver exceptional customer
-                experiences — 24/7.
+                We deliver smart, scalable BPO and call center solutions,
+                helping businesses worldwide enhance efficiency, reduce costs,
+                and provide exceptional customer experiences — powered by
+                innovation, expertise, and 24/7 support.
               </p>
             </div>
 
             {/* CTA Button */}
             <div ref={ctaRef}>
-              <button className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 border border-primary/20">
+              <button className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 border border-primary/20"
+              
+                onClick={() => navigate("/contact")}
+              >
                 Get Started
               </button>
             </div>
@@ -112,7 +120,7 @@ const Hero = () => {
               {/* Main Profile Image */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
+                  src={heroImg}
                   alt="Oliver Jackson"
                   className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500"
                 />
@@ -130,7 +138,7 @@ const Hero = () => {
                       EMAIL :
                     </span>
                     <p className="text-sm font-medium">
-                      enquiry@InnovateOutsource.com
+                      enquiry@Innovateoutsource.com
                     </p>
                   </div>
                   <div>
@@ -144,8 +152,7 @@ const Hero = () => {
                       ADDRESS :
                     </span>
                     <p className="text-sm font-medium">
-                      203, Mangal City Mall Vijay Nagar, Indore Madhya Pradesh –
-                      452010, India
+                      301, Mangal City, Mall Vijay Nagar, Indore.
                     </p>
                   </div>
                 </div>

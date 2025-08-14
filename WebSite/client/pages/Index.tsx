@@ -7,12 +7,13 @@ import Testimonials from "../components/Testimonials";
 import Clients from "../components/Clients";
 import Blog from "../components/Blog";
 import Contact from "../components/Contact";
-
+import WhyChouseUs from "../components/WhyChouseUs";
 export default function Index() {
   return (
     <div className="min-h-screen">
       <Hero />
       <About />
+      <WhyChouseUs />
       <Services />
       <Portfolio />
       <Achievements />

@@ -13,96 +13,32 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      categories: ["CALL CENTER", "CUSTOMER SUPPORT"],
-      title: "Fortune 500 Customer Service",
+      categories: ["INBOUND", "OUTBOUND"],
+      title: "Comprehensive Service Solutions",
       description:
-        "Handled multi-lingual customer support for a Fortune 500 company, improving satisfaction by 32%",
+        "From inbound and outbound call handling to email, chat, and social media support, we help you connect with customers across every channel.",
       image:
         "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
-      link: "VIEW DETAILS",
     },
     {
       id: 2,
-      categories: ["TECHNICAL SUPPORT", "HELPDESK"],
-      title: "Global Tech Support Operations",
+      categories: ["SUPPORT", "EXPERTS"],
+      title: "Highly Skilled Professional Team",
       description:
-        "Delivered 24/7 tech assistance for a leading global software brand, reducing downtime significantly.",
+        "We hire and train top talent to deliver unmatched service quality while fostering a professional and supportive work culture",
       image:
         "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop",
-      link: "VIEW DETAILS",
     },
     {
       id: 3,
-      categories: ["DATA PROCESSING", "BACK OFFICE"],
-      title: "Healthcare Data Processing",
+      categories: ["CULTURE", "GROWTH"],
+      title: "Supportive and Growth Culture",
       description:
-        "Managed sensitive healthcare data with accuracy and HIPAA compliance.",
-       image:
-        "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=600&fit=crop",
-      link: "VIEW DETAILS",
-    },
-    {
-      id: 4,
-      categories: ["TELEMARKETING", "SALES"],
-      title: "E-commerce Sales Campaign",
-      description:
-        "Executed successful sales campaigns, boosting online conversions by 41%.",
+        "Our team thrives in an environment that encourages growth, values contributions, and supports career advancement at all levels.",
       image:
         "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=600&fit=crop",
-      link: "VIEW DETAILS",
     },
   ];
-
-  // useEffect(() => {
-  //   const cards = cardsRef.current.filter(Boolean);
-
-  //   if (!cards.length) return;
-
-  //   // Clear any existing ScrollTriggers
-  //   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-
-  //   // Set initial state - cards in column layout
-  //   gsap.set(cards, {
-  //     scale: 1,
-  //     zIndex: (i) => cards.length - i,
-  //     transformOrigin: "center center",
-  //   });
-
-  //   // Create stacking animation for each card
-  //   cards.forEach((card, index) => {
-  //     if (index < cards.length - 1) {
-  //       ScrollTrigger.create({
-  //         trigger: card,
-  //         start: "top top",
-  //         end: "bottom top",
-  //         pin: false,
-  //         pinSpacing: false,
-  //         scrub: 1,
-  //         onUpdate: (self) => {
-  //           const nextCard = cards[index + 1];
-  //           if (nextCard) {
-  //             const progress = self.progress;
-
-  //             // Next card slides up and has higher z-index
-  //             gsap.set(nextCard, {
-  //               y: -progress * window.innerHeight,
-  //               zIndex: cards.length + index + 1, // Higher z-index than current card
-  //             });
-
-  //             // Current card scales down slightly when next card comes over
-  //             gsap.set(card, {
-  //               scale: 1 - progress * 0.05,
-  //             });
-  //           }
-  //         },
-  //       });
-  //     }
-  //   });
-
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, []);
 
   return (
     <section ref={sectionRef} className="py-24 bg-background relative">
@@ -111,19 +47,19 @@ const Portfolio = () => {
         <div className="flex items-center justify-between mb-16">
           <div>
             <span className="text-primary font-medium uppercase tracking-wide text-sm mb-4 block">
-              OUR PORTFOLIO
+              Our Advantage
             </span>
             <h2 className="text-4xl md:text-5xl font-bold">
-              SELECTED <span className="text-primary">WORKS.</span>
+              WHY WE’RE {" "}
+              <span className="text-primary">THE BEST</span>
             </h2>
           </div>
 
           <div className="hidden md:block">
-            <button className="glass-button inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-foreground rounded-full"
-            >
+            {/* <button className="glass-button inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-foreground rounded-full">
               VIEW ALL
               <ArrowUpRight className="ml-2 h-4 w-4" />
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -167,12 +103,12 @@ const Portfolio = () => {
                   </p>
 
                   {/* Link */}
-                  <div className="flex items-center text-primary font-medium hover:text-primary/80 transition-colors cursor-pointer group">
+                  {/* <div className="flex items-center text-primary font-medium hover:text-primary/80 transition-colors cursor-pointer group">
                     <span className="mr-2 underline decoration-primary/50 group-hover:decoration-primary transition-colors">
                       {project.link}
                     </span>
                     <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Right Image */}

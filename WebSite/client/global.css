@@ -10,26 +10,29 @@
    * Dark-first design with professional gradient accents
    */
   :root {
-    /* Background Colors - Dark theme like reference */
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  --gradient-from: 221 83% 53%;
+  --gradient-to: 241 100% 59%;
+}
 
-    /* Card Colors */
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 98%;
-
-    /* Popover Colors */
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 98%;
-
-    /* Primary Brand Colors - Orange/Red theme */
-    --primary: 14 100% 57%;
-    --primary-foreground: 0 0% 98%;
-
-    /* Secondary Colors */
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-  }
 
   /* Light Theme Variables */
   .light-theme {

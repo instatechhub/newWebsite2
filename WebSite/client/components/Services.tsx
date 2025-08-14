@@ -1,6 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: (
@@ -105,10 +107,10 @@ const Services = () => {
           />
         </svg>
       ),
-      title: "Data Entry & Processing",
-      categories: ["DATA ENTRY", "PROCESSING"],
+      title: "Lead Generation",
+      categories: ["B2B", "B2C"],
       description:
-        "Accurate and efficient data handling to keep your business organized and compliant.",
+        "Driving business growth by generating high-quality leads through targeted outreach, strategic campaigns, and market research.",
     },
   ];
 
@@ -127,7 +129,10 @@ const Services = () => {
           </div>
 
           <div className="hidden md:block">
-            <button className="glass-button inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-foreground rounded-full">
+            <button
+              className="glass-button inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-foreground rounded-full"
+              onClick={() => navigate("/services")}
+            >
               VIEW ALL
               <ArrowUpRight className="ml-2 h-4 w-4" />
             </button>
