@@ -19,7 +19,7 @@ export default function Index() {
       <Achievements />
       <Testimonials />
       <Clients />
-      <Blog />
+      {/* <Blog /> */}
       <Contact />
     </div>
   );

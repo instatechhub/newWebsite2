@@ -1,10 +1,8 @@
 const Clients = () => {
   const clients = [
-    { name: "Terra", logo: "🌍" },
-    { name: "hues", logo: "🎨" },
-    { name: "then", logo: "✨" },
-    { name: "Rise", logo: "📈" },
-    { name: "Hitech", logo: "💻" },
+    { name: "Magic Pin", logo: "🌍" },
+    { name: "India Mart", logo: "🎨" },
+  
   ];
 
   return (

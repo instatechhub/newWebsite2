@@ -27,23 +27,23 @@ const Navigation = () => {
       href: "/",
     },
     {
-      name: "PORTFOLIO",
-      href: "/portfolio",
+      name: "SERVICES",
+      href: "/services",
     },
     {
       name: "PAGES",
       href: "#",
       dropdown: [
-        { name: "About Us", href: "/about" },
-        { name: "Services", href: "/services" },
         { name: "Team", href: "/team" },
         { name: "FAQ", href: "/faq" },
       ],
     },
-    {
-      name: "BLOGS",
-      href: "/blogs",
-    },
+    // {
+    //   name: "BLOGS",
+    //   href: "/blogs",
+    // },
+    { name: "About Us", href: "/about" },
+
     {
       name: "CONTACT US",
       href: "/contact",

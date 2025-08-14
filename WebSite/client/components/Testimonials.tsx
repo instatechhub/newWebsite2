@@ -7,33 +7,33 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      category: "DESIGN QUALITY",
+      category: "CUSTOMER SERVICE",
       quote:
-        '"InnovateOutsource transformed our customer support process — now it’s faster, better, and more efficient!"',
-      name: "Matthew R. Dubin",
-      position: "Private Customer",
+        'InnovateOutsource transformed our customer support process — now it’s faster, better, and more efficient!',
+      name: "Vaibhav Pawar",
+      position: "Manager",
       avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+        "https://www.instaconnects.com/static/media/userDummy.7acd5f1b3b420a54e38f.png",
     },
     {
       id: 2,
-      category: "DESIGN QUALITY",
+      category: "CUSTOMER SERVICE",
       quote:
-        '"Professional team with quick response times and excellent service delivery."',
-      name: "Sarah Johnson",
-      position: "CEO, TechCorp",
+        'Professional team with quick response times and excellent service delivery.',
+      name: "Shubham Vanduj",
+      position: "Executive",
       avatar:
-       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+       "https://www.instaconnects.com/static/media/userDummy.7acd5f1b3b420a54e38f.png",
     },
     {
       id: 3,
       category: "DESIGN QUALITY",
       quote:
-        '"Their expertise in BPO operations is unmatched. Highly recommend!"',
-      name: "Michael",
-      position: "Product Manager",
+        'Their expertise in BPO operations is unmatched. Highly recommend!',
+      name: "Rohit Samre",
+      position: "Executive",
       avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+        "https://www.instaconnects.com/static/media/userDummy.7acd5f1b3b420a54e38f.png",
     },
   ];
 
