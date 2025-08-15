@@ -6,9 +6,12 @@ import {
   Instagram,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assests/logo.jpeg";
+import {useTheme} from "../hooks/use-theme"
+import logo from "../assests/logo.png";
+import logo2 from "../assests/logo2.png";
 
 const Footer = () => {
+   const { theme } = useTheme();
   const footerLinks = {
     "USEFUL LINKS": [
       { name: "About", href: "/about" },
@@ -33,7 +36,8 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center space-x-2">
               <img
-                src={logo}
+                // src={logo}
+                 src={theme === "dark" ? logo : logo2}
                 alt="Logo"
                 className="h-15 w-auto object-contain dark:invert transition-all duration-300"
               />
