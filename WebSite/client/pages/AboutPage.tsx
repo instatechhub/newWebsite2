@@ -370,34 +370,35 @@ const AboutPage = () => {
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
-                <div key={index} className="value-card">
-                  <div className="glass-morphism rounded-2xl p-8 h-full hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-start space-x-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="h-8 w-8 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold mb-4">
-                          {value.title}
-                        </h3>
-                        <p className="text-muted-foreground mb-6">
-                          {value.description}
-                        </p>
-                        <ul className="space-y-2">
-                          {value.features.map((feature, idx) => (
-                            <li
-                              key={idx}
-                              className="flex items-center text-sm text-muted-foreground"
-                            >
-                              <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+               <div key={index} className="value-card">
+  <div className="glass-morphism rounded-2xl p-8 h-full hover:shadow-xl transition-all duration-300">
+    <div className="flex flex-col sm:flex-row items-start sm:space-x-6 space-y-6 sm:space-y-0">
+      <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+        <IconComponent className="h-8 w-8 text-primary" />
+      </div>
+      <div className="flex-1">
+        <h3 className="text-2xl font-bold mb-4">
+          {value.title}
+        </h3>
+        <p className="text-muted-foreground mb-6">
+          {value.description}
+        </p>
+        <ul className="space-y-2">
+          {value.features.map((feature, idx) => (
+            <li
+              key={idx}
+              className="flex items-center text-sm text-muted-foreground"
+            >
+              <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
               );
             })}
           </div>
@@ -429,38 +430,45 @@ const AboutPage = () => {
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-primary/50 via-primary to-primary/50"></div>
 
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <div
-                  key={index}
-                  className={`timeline-item flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
-                >
-                  <div
-                    className={`w-1/2 ${index % 2 === 0 ? "pr-8 text-right" : "pl-8"}`}
-                  >
-                    <div className="glass-morphism rounded-2xl p-6">
-                      <div className="text-2xl font-bold text-primary mb-2">
-                        {item.year}
-                      </div>
-                      <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                      <p className="text-muted-foreground mb-4">
-                        {item.description}
-                      </p>
-                      <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                        {item.milestone}
-                      </div>
-                    </div>
-                  </div>
+          <div className="space-y-8">
+  {timeline.map((item, index) => (
+    <div
+      key={index}
+      className={`timeline-item flex flex-col md:flex-row md:items-center ${
+        index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+      }`}
+    >
+      <div
+        className={`w-full md:w-1/2 ${
+          index % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8"
+        }`}
+      >
+        <div className="glass-morphism rounded-2xl p-6">
+          <div className="text-2xl font-bold text-primary mb-2">
+            {item.year}
+          </div>
+          <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+          <p className="text-muted-foreground mb-4">
+            {item.description}
+          </p>
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+            {item.milestone}
+          </div>
+        </div>
+      </div>
 
-                  {/* Timeline Node */}
-                  <div className="relative z-10">
-                    <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
-                  </div>
+      {/* Timeline Node (Hidden on Mobile) */}
+      <div className="hidden md:flex relative z-10">
+        <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
+      </div>
 
-                  <div className="w-1/2"></div>
-                </div>
-              ))}
-            </div>
+      {/* Right/Bottom Column (Empty for spacing on Desktop, hidden on Mobile) */}
+      <div className="hidden md:block w-1/2"></div>
+    </div>
+  ))}
+</div>
+
+
           </div>
         </div>
       </section>

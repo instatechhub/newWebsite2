@@ -33,7 +33,11 @@ const Footer = () => {
     { icon: <Facebook className="h-5 w-5" />, href: "#", label: "Facebook" },
     { icon: <Twitter className="h-5 w-5" />, href: "#", label: "Twitter" },
     { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Instagram className="h-5 w-5" />, href: "#", label: "Instagram" },
+    {
+      icon: <Instagram className="h-5 w-5" />,
+      href: "https://www.instagram.com/innovateoutsource/",
+      label: "Instagram",
+    },
   ];
 
   const handleNewsSubmit = async (e: React.FormEvent) => {
@@ -44,7 +48,6 @@ const Footer = () => {
       return;
     }
     setIsLoading(true);
-
 
     try {
       const response = await axios.post(
@@ -62,7 +65,10 @@ const Footer = () => {
         toast.error("Subscription failed. Please try again.");
       }
     } catch (error: any) {
-      toast.error(error?.response?.data?.message || "Failed to send message. Please try again after some time.");
+      toast.error(
+        error?.response?.data?.message ||
+          "Failed to send message. Please try again after some time.",
+      );
     } finally {
       setIsLoading(false);
     }
@@ -158,6 +164,7 @@ const Footer = () => {
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
                     aria-label={social.label}
                     className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
                   >
@@ -167,14 +174,14 @@ const Footer = () => {
               </div>
               <div className="w-full border-t border-gray-600">
                 <div className="max-w-7xl mx-auto px-4 py-4 flex justify-end">
-                  <div className="flex gap-8 text-gray-400 text-xs">
+                  {/* <div className="flex gap-8 text-gray-400 text-xs">
                     <span className="cursor-pointer hover:text-white transition duration-300 whitespace-nowrap">
                       Privacy Policy
                     </span>
                     <span className="cursor-pointer hover:text-white transition duration-300 whitespace-nowrap">
                       Terms & Conditions
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
