@@ -112,7 +112,7 @@ const ServiceDetailPage = () => {
               Ready to <span className="text-primary">Grow Your Business?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let Insta Connects handle your inbound services while you focus on
+              Let Innovate Outsource handle your inbound services while you focus on
               what matters most.
             </p>
             <Link
