@@ -6,113 +6,78 @@ import TopPageHeader from '../components/TopPageHeader';
 import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
-  const faqs = [
-    {
-      id: 1,
-      category: 'services',
-      question: 'What BPO services do you offer?',
-      answer: 'We provide comprehensive BPO solutions including call center services, technical support, data processing, telemarketing, back-office operations, and live chat support. Our services are available 24/7 across multiple time zones.',
-      popular: true
-    },
-    {
-      id: 2,
-      category: 'services',
-      question: 'Do you provide multilingual support?',
-      answer: 'Yes, we offer support in 15+ languages including English, Spanish, French, German, Italian, Portuguese, Hindi, Mandarin, Japanese, and more. Our agents are native speakers with cultural expertise.',
-      popular: true
-    },
-    {
-      id: 3,
-      category: 'pricing',
-      question: 'How is your pricing structured?',
-      answer: 'Our pricing is flexible and based on service type, volume, complexity, and duration. We offer per-hour, per-transaction, and fixed monthly pricing models. Contact us for a customized quote based on your specific requirements.',
-      popular: true
-    },
-    {
-      id: 4,
-      category: 'services',
-      question: 'What industries do you serve?',
-      answer: 'We serve diverse industries including healthcare, finance, e-commerce, technology, telecommunications, retail, travel, real estate, and more. Our team has specialized expertise across different verticals.',
-      popular: false
-    },
-    {
-      id: 5,
-      category: 'security',
-      question: 'How do you ensure data security?',
-      answer: 'We maintain the highest security standards with ISO 27001 certification, GDPR compliance, SOC 2 Type II certification, encrypted data transmission, secure infrastructure, and 24/7 security monitoring.',
-      popular: true
-    },
-    {
-      id: 6,
-      category: 'support',
-      question: 'What are your operating hours?',
-      answer: 'We operate 24/7/365 with centers across multiple time zones. This ensures continuous coverage and support for your business regardless of your location or customer needs.',
-      popular: false
-    },
-    {
-      id: 7,
-      category: 'pricing',
-      question: 'Do you offer trial periods?',
-      answer: 'Yes, we offer a 30-day trial period for new clients to evaluate our services. This includes full access to our capabilities with dedicated account management and performance reporting.',
-      popular: false
-    },
-    {
-      id: 8,
-      category: 'services',
-      question: 'Can you handle high-volume campaigns?',
-      answer: 'Absolutely. We have the infrastructure and workforce to handle high-volume operations. Our largest campaigns have processed over 100,000 interactions per day with maintained quality standards.',
-      popular: false
-    },
-    {
-      id: 9,
-      category: 'security',
-      question: 'What compliance certifications do you have?',
-      answer: 'We hold multiple certifications including ISO 27001 (Information Security), SOC 2 Type II, GDPR compliance, HIPAA compliance, and PCI DSS for payment processing. We undergo regular audits to maintain these standards.',
-      popular: false
-    },
-    {
-      id: 10,
-      category: 'support',
-      question: 'How do you ensure quality control?',
-      answer: 'We implement Six Sigma processes, continuous monitoring, regular training, quality scorecards, customer feedback integration, and performance metrics tracking. Our quality assurance team conducts regular audits.',
-      popular: false
-    },
-    {
-      id: 11,
-      category: 'pricing',
-      question: 'Are there setup fees or hidden costs?',
-      answer: 'Our pricing is transparent with no hidden fees. Setup costs vary based on complexity and customization requirements. We provide detailed pricing breakdowns before project commencement.',
-      popular: false
-    },
-    {
-      id: 12,
-      category: 'services',
-      question: 'Do you provide analytics and reporting?',
-      answer: 'Yes, we provide comprehensive real-time dashboards, detailed analytics, performance reports, KPI tracking, and custom reporting based on your specific metrics and business requirements.',
-      popular: true
-    },
-    {
-      id: 13,
-      category: 'support',
-      question: 'How quickly can you scale operations?',
-      answer: 'We can typically scale operations within 2-4 weeks depending on requirements. Our flexible infrastructure and trained agent pool allow for rapid scaling up or down based on your business needs.',
-      popular: false
-    },
-    {
-      id: 14,
-      category: 'security',
-      question: 'How do you handle confidential information?',
-      answer: 'All staff sign comprehensive NDAs, access is role-based and monitored, data is encrypted at rest and in transit, we maintain audit trails, and follow strict data retention and disposal policies.',
-      popular: false
-    },
-    {
-      id: 15,
-      category: 'pricing',
-      question: 'What payment terms do you offer?',
-      answer: 'We offer flexible payment terms including monthly billing, quarterly payments, and annual contracts with discounts. Payment methods include wire transfer, ACH, and major credit cards.',
-      popular: false
-    }
-  ];
+const faqs = [
+ {
+ id: 1,
+ category: 'services',
+ question: 'What services does InnovateOutsource offer?',
+ answer: 'We provide a comprehensive range of BPO services including inbound and outbound call center support, technical support, data entry, back-office operations, chat support, email support, telemarketing, and customer relationship management.',
+ popular: true
+ },
+ {
+ id: 2,
+ category: 'services',
+ question: 'How can I hire your BPO services?',
+ answer: 'You can hire our services by contacting us via email at business@innovateoutsource.com or phone at +91 081205 45454. We will discuss your requirements and provide a customized solution.',
+ popular: true
+ },
+ {
+ id: 3,
+ category: 'services',
+ question: 'What industries do you serve?',
+ answer: 'We cater to various industries including IT, e-commerce, healthcare, finance, education, real estate, and more. Our solutions are tailored to fit the unique needs of each sector.',
+ popular: true
+ },
+ {
+ id: 4,
+ category: 'support',
+ question: 'Do you offer 24/7 support?',
+ answer: 'Yes, InnovateOutsource provides round-the-clock support to ensure that your business operations run smoothly without interruptions.',
+ popular: false
+ },
+ {
+ id: 5,
+ category: 'security',
+ question: 'How do you ensure data security?',
+ answer: 'We follow strict data security protocols including secure servers, encrypted communication channels, and confidentiality agreements to protect all client information.',
+ popular: true
+ },
+ {
+ id: 6,
+ category: 'services',
+ question: 'Can you scale services according to our business growth?',
+ answer: 'Absolutely! We offer flexible solutions that can scale up or down based on your business requirements, ensuring optimal efficiency and costeffectiveness.',
+ popular: false
+ },
+ {
+ id: 7,
+ category: 'pricing',
+ question: 'How is pricing determined for your services?',
+ answer: 'Pricing depends on the type of service, volume, complexity, and duration. We provide transparent and customized pricing plans after understanding your specific needs.',
+ popular: true
+ },
+ {
+ id: 8,
+ category: 'services',
+ question: 'What makes InnovateOutsource different from other BPO providers?',
+answer: 'Our personalized approach, skilled professionals, quick turnaround, and commitment to quality set us apart. We focus on building long-term relationships with our clients.',
+ popular: true
+ },
+ {
+ id: 9,
+ category: 'support',
+ question: 'How do you onboard new clients?',
+ answer: 'Once we understand your requirements, we assign a dedicated account manager who guides you through the process, sets up necessary workflows, and ensures seamless integration with your operations.',
+ popular: false
+ },
+ {
+ id: 10,
+ category: 'services',
+ question: 'Can I request a trial before committing to your services?',
+ answer: 'Yes, we offer trial projects or pilot programs for selected services to ensure you are satisfied with our quality and performance before a long-term engagement.',
+ popular: false
+ },
+]
 
 const FAQPage = () => {
   const heroRef = useRef<HTMLDivElement>(null);

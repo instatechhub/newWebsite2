@@ -172,7 +172,9 @@ const Services = () => {
               </p>
 
               {/* Arrow Icon */}
-              <div className="flex justify-end">
+              <div className="flex justify-end"
+                onClick={() => navigate("/services/" + service.title.toLowerCase().replace(/\s+/g, '-'))}
+              >
                 <div className="w-8 h-8 rounded-full bg-accent/50 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   <ArrowUpRight className="h-4 w-4" />
                 </div>
