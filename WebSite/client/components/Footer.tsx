@@ -4,14 +4,21 @@ import {
   Twitter,
   Linkedin,
   Instagram,
+  LoaderCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import {useTheme} from "../hooks/use-theme"
+import { useTheme } from "../hooks/use-theme";
 import logo from "../assests/logo.png";
 import logo2 from "../assests/logo2.png";
+import { useState } from "react";
+import axios from "axios";
+import { toast } from "sonner";
 
 const Footer = () => {
-   const { theme } = useTheme();
+  const { theme } = useTheme();
+  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
+
   const footerLinks = {
     "USEFUL LINKS": [
       { name: "About", href: "/about" },
@@ -29,6 +36,32 @@ const Footer = () => {
     { icon: <Instagram className="h-5 w-5" />, href: "#", label: "Instagram" },
   ];
 
+  const handleNewsSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await axios.post(
+        "https://app.instaconnects.com/api/v1/instaConnect/inovateEmailSend",
+        {
+          type: "newsletter",
+          email: email,
+        },
+      );
+
+      if (response.status === 200) {
+        toast.success("Subscribed to newsletter successfully!");
+        setEmail("");
+      } else {
+        toast.error("Subscription failed. Please try again.");
+      }
+    } catch (error: any) {
+      toast.error(error?.response?.data?.message || "Failed to send message. Please try again after some time.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <footer className="bg-gradient-to-t from-neutral-950 to-background">
       <div className="container-max section-padding">
@@ -37,7 +70,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center space-x-2">
               <img
                 // src={logo}
-                 src={theme === "dark" ? logo : logo2}
+                src={theme === "dark" ? logo : logo2}
                 alt="Logo"
                 className="h-15 w-auto object-contain dark:invert transition-all duration-300"
               />
@@ -95,10 +128,21 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Your Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   className="flex-1 px-4 py-3 bg-accent/20 border border-border/30 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary rounded-l-lg"
                 />
-                <button className="px-4 py-3 bg-primary text-white rounded-r-lg hover:bg-primary/90 transition-colors">
-                  <ArrowRight className="h-5 w-5" />
+                <button
+                  className="px-4 py-3 bg-primary text-white rounded-r-lg hover:bg-primary/90 transition-colors"
+                  disabled={isLoading}
+                  onClick={handleNewsSubmit}
+                >
+                  {isLoading ? (
+                    <LoaderCircle className="ml-2 h-5 w-5 animate-spin" />
+                  ) : (
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  )}
                 </button>
               </div>
 

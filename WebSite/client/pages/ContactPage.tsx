@@ -3,6 +3,7 @@ import {
   ArrowUpRight,
   Clock,
   Globe,
+  LoaderCircle,
   Mail,
   MapPin,
   Phone,
@@ -13,6 +14,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TopPageHeader from "../components/TopPageHeader";
 import officeImg from "../assests/banner3.png";
+import axios from "axios";
+import { toast } from "sonner";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactPage = () => {
@@ -20,6 +24,7 @@ const ContactPage = () => {
   const formRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
+    type:"enquiry",
     name: "",
     email: "",
     company: "",
@@ -27,6 +32,7 @@ const ContactPage = () => {
     service: "",
     message: "",
   });
+const [isLoading, setIsLoading] = useState(false);
 
   const contactMethods = [
     {
@@ -87,12 +93,33 @@ const ContactPage = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
-  };
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsLoading(true);
+
+  try {
+    const response = await axios.post("https://app.instaconnects.com/api/v1/instaConnect/inovateEmailSend", formData);
+
+    if (response.status === 200) {
+      toast.success("Message sent successfully!");
+      setFormData({
+        type: "enquiry",
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+    } else {
+      toast.error("Something went wrong. Please try again.");
+    }
+  } catch (error: any) {
+    toast.error(error?.response?.data?.message || "Failed to send message.");
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   useEffect(() => {
     // Hero animation
@@ -295,6 +322,7 @@ const ContactPage = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
                         placeholder="Your company"
+                        required
                       />
                     </div>
                     <div>
@@ -307,7 +335,8 @@ const ContactPage = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+91 12345 34567"
+                        required
                       />
                     </div>
                   </div>
@@ -321,6 +350,7 @@ const ContactPage = () => {
                       value={formData.service}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
+                    required
                     >
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
@@ -343,15 +373,20 @@ const ContactPage = () => {
                       rows={4}
                       className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all resize-none"
                       placeholder="Tell us about your project requirements..."
+                      
                     />
                   </div>
 
                   <button
                     type="submit"
                     className="w-full glass-button inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-foreground rounded-xl hover:scale-105 transition-transform"
+                    disabled={isLoading}
                   >
-                    Send Message
-                    <Send className="ml-2 h-5 w-5" />
+                    {isLoading ? "Sending ": "Send Message"}
+
+                    {isLoading ? <LoaderCircle className="ml-2 h-5 w-5 animate-spin" />: <Send className="ml-2 h-5 w-5" />}
+                   
+                    
                   </button>
                 </form>
               </div>
