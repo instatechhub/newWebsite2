@@ -38,7 +38,13 @@ const Footer = () => {
 
   const handleNewsSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!email) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
     setIsLoading(true);
+
 
     try {
       const response = await axios.post(
