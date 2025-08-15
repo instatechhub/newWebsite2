@@ -105,7 +105,7 @@ const Footer = () => {
                   enquiry@Innovateoutsource.com
                 </p>
                 <p className="text-primary font-medium">
-                  +91 081205 45454 CALL
+                  +91 8287373007 CALL
                 </p>
               </div>
             </div>

@@ -18,7 +18,7 @@ const faqs = [
  id: 2,
  category: 'services',
  question: 'How can I hire your BPO services?',
- answer: 'You can hire our services by contacting us via email at business@innovateoutsource.com or phone at +91 081205 45454. We will discuss your requirements and provide a customized solution.',
+ answer: 'You can hire our services by contacting us via email at business@innovateoutsource.com or phone at +91 81205 45454. We will discuss your requirements and provide a customized solution.',
  popular: true
  },
  {
@@ -371,7 +371,7 @@ const FAQPage = () => {
                 <h3 className="text-xl font-bold mb-4">Call Us</h3>
                 <p className="text-muted-foreground mb-4">Speak directly with our experts</p>
                 <button className="text-primary font-medium hover:underline">
-                  +91 081205 45454
+                  +91 8287373007
                 </button>
               </div>
 

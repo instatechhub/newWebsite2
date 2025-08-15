@@ -39,7 +39,7 @@ const [isLoading, setIsLoading] = useState(false);
       icon: Phone,
       title: "Call Us",
       description: "Speak with our experts",
-      info: "+91 81205 45454",
+      info: "+91 8287373007",
       available: "24/7 Available",
       color: "from-blue-500/20 to-blue-600/20",
     },
@@ -67,7 +67,7 @@ const [isLoading, setIsLoading] = useState(false);
       country: "INDIA",
       address:
         "301, Mangal City Mall, Vijay Nagar Indore, Madhya Pradesh 452010",
-      phone: "+91 081205 45454",
+      phone: "+91 8287373007",
       email: "enquiry@Innovateoutsource.com",
       timezone: "Asia/Kolkata",
       image: officeImg,

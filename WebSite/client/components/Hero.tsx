@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
 import heroImg from "../assests/about-us.jpg";
 
-
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -102,8 +101,8 @@ const Hero = () => {
 
             {/* CTA Button */}
             <div ref={ctaRef}>
-              <button className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 border border-primary/20"
-              
+              <button
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 border border-primary/20"
                 onClick={() => navigate("/contact")}
               >
                 Get Started
@@ -145,15 +144,7 @@ const Hero = () => {
                     <span className="text-xs text-muted-foreground uppercase tracking-wide">
                       PHONE :
                     </span>
-                    <p className="text-sm font-medium">+91 081205 45454</p>
-                  </div>
-                  <div>
-                    <span className="text-xs text-muted-foreground uppercase tracking-wide">
-                      ADDRESS :
-                    </span>
-                    <p className="text-sm font-medium">
-                      301, Mangal City Mall, Vijay Nagar, Indore.
-                    </p>
+                    <p className="text-sm font-medium">+91 8287373007</p>
                   </div>
                 </div>
               </div>
