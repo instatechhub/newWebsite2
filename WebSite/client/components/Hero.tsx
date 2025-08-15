@@ -152,7 +152,7 @@ const Hero = () => {
                       ADDRESS :
                     </span>
                     <p className="text-sm font-medium">
-                      301, Mangal City, Mall Vijay Nagar, Indore.
+                      301, Mangal City Mall, Vijay Nagar, Indore.
                     </p>
                   </div>
                 </div>
