@@ -122,6 +122,7 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 142 86% 28%;
+    
   }
 
   /* Light Theme Variables */
@@ -158,6 +159,8 @@
 
   html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
   }
 
   body {
