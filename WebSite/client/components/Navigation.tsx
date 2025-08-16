@@ -140,7 +140,7 @@ const Navigation = () => {
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="w-10 h-10 rounded-full bg-card hover:bg-muted transition-all duration-300 flex items-center justify-center group hover:scale-110"
+              className="w-10 h-10 rounded-full hover:bg-muted transition-all duration-300 flex items-center justify-center group hover:scale-110"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             >
               {theme === "dark" ? (
@@ -225,14 +225,14 @@ const Navigation = () => {
                   <>
                     <Sun className="h-4 w-4 text-foreground" />
                     <span className="text-sm font-medium text-foreground">
-                      Light Mode
+                     Change Theme
                     </span>
                   </>
                 ) : (
                   <>
                     <Moon className="h-4 w-4 text-foreground" />
                     <span className="text-sm font-medium text-foreground">
-                      Dark Mode
+                      Change Theme
                     </span>
                   </>
                 )}

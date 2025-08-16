@@ -21,6 +21,7 @@ import BlogsPage from "./pages/BlogsPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
 import ContactPage from "./pages/ContactPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
+import PlaceholderPage from "./components/PlaceholderPage";
 
 const queryClient = new QueryClient();
 
@@ -41,7 +42,7 @@ const App = () => (
                 {/* <Route path="/portfolio" element={<PortfolioPage />} /> */}
                 {/* <Route path="/team" element={<TeamPage />} /> */}
                 <Route path="/faq" element={<FAQPage />} />
-                {/* <Route path="/blogs" element={<BlogsPage />} /> */}
+                <Route path="/blogs" element={<PlaceholderPage title = "blogs" />} />
                 {/* <Route path="/blog/:id" element={<BlogDetailPage />} /> */}
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services/:title" element={<ServiceDetailPage />} />

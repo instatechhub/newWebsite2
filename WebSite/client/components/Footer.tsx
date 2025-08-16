@@ -23,7 +23,7 @@ const Footer = () => {
     "USEFUL LINKS": [
       { name: "About", href: "/about" },
       { name: "Services", href: "/services" },
-      { name: "Blog", href: "/blog" },
+      { name: "Blogs", href: "/blogs" },
       { name: "Contact", href: "/contact" },
       { name: "FAQs", href: "/faq" },
     ],

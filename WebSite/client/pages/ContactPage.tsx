@@ -267,7 +267,7 @@ const [isLoading, setIsLoading] = useState(false);
 
       {/* Contact Form & Info */}
       <section className="py-24 bg-gradient-to-br from-card/30 to-background">
-        <div className="container-max section-padding">
+        <div className="p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div ref={formRef}>
