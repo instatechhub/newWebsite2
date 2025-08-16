@@ -5,7 +5,7 @@ const Contact = () => {
   const navigate = useNavigate();
   return (
     <section className="py-24 bg-gradient-to-b from-neutral-900/30 to-background overflow-hidden relative">
-      <div className="container-max section-padding">
+      <div>
         {/* Cross Pattern Background */}
         <div className="absolute inset-0 opacity-5">
           {/* Horizontal moving crosses */}

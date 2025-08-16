@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import * as Icons from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TopPageHeader from "@/components/TopPageHeader";
 
-import servicesData  from "../utills/servicesData";
+import servicesData from "../utills/servicesData";
 
+gsap.registerPlugin(ScrollTrigger);
 
 const slugifyTitle = (title) =>
   title
@@ -18,7 +21,87 @@ const slugifyTitle = (title) =>
 const ServiceDetailPage = () => {
   const { title } = useParams();
 
-  // Find the matching service based on the slug
+  const heroRef = useRef(null);
+  const imageRef = useRef(null);
+  const featuresRef = useRef([]);
+  const ctaRef = useRef(null);
+
+useEffect(() => {
+  // Hero text animation
+  gsap.fromTo(
+    heroRef.current.querySelectorAll("h1, p"),
+    { y: 60, opacity: 0, rotateX: 20 },
+    {
+      y: 0,
+      opacity: 1,
+      rotateX: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "back.out(1.7)",
+    }
+  );
+
+  // Hero image parallax zoom-in effect
+  gsap.fromTo(
+    imageRef.current,
+    { y: 80, opacity: 0, scale: 1.1 },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: imageRef.current,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+    }
+  );
+
+  // Feature cards animation (fade + lift + rotateY)
+  featuresRef.current.forEach((card, i) => {
+    gsap.fromTo(
+      card,
+      { y: 70, opacity: 0, rotateY: -10 },
+      {
+        y: 0,
+        opacity: 1,
+        rotateY: 0,
+        duration: 0.8,
+        delay: i * 0.15,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
+
+  // CTA section animation (scale bounce + fade)
+  gsap.fromTo(
+    ctaRef.current,
+    { y: 60, opacity: 0, scale: 0.95 },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 1,
+      ease: "elastic.out(1, 0.6)",
+      scrollTrigger: {
+        trigger: ctaRef.current,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+    }
+  );
+}, [title]);
+
+
+
+  // Find the matching service
   const service = servicesData.find(
     (srv) => slugifyTitle(srv.title) === title
   );
@@ -40,7 +123,7 @@ const ServiceDetailPage = () => {
 
       <div>
         {/* Hero Section */}
-        <section className="relative py-20">
+        <section ref={heroRef} className="relative py-20">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               {service.title.split(" ").slice(0, -1).join(" ")}{" "}
@@ -59,7 +142,10 @@ const ServiceDetailPage = () => {
 
         {/* Main Image */}
         <div className="container-max section-padding pb-24">
-          <div className="relative aspect-[16/7] rounded-3xl overflow-hidden shadow-2xl">
+          <div
+            ref={imageRef}
+            className="relative aspect-[16/7] rounded-3xl overflow-hidden shadow-2xl"
+          >
             <img
               src={service.image}
               alt={service.title}
@@ -79,6 +165,7 @@ const ServiceDetailPage = () => {
                 return (
                   <div
                     key={index}
+                    ref={(el) => (featuresRef.current[index] = el)}
                     className="flex-1 min-w-[300px] max-w-[400px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group"
                   >
                     {/* Icon */}
@@ -106,14 +193,17 @@ const ServiceDetailPage = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-24 bg-gradient-to-r from-primary/10 via-primary/5 to-background">
+        <section
+          ref={ctaRef}
+          className="py-24 bg-gradient-to-r from-primary/10 via-primary/5 to-background"
+        >
           <div className="container-max section-padding text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to <span className="text-primary">Grow Your Business?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let Innovate Outsource handle your inbound services while you focus on
-              what matters most.
+              Let Innovate Outsource handle your inbound services while you
+              focus on what matters most.
             </p>
             <Link
               to="/contact"
