@@ -1,15 +1,18 @@
 import { ArrowLeft, Construction } from "lucide-react";
 import { Link } from "react-router-dom";
 
+
 interface PlaceholderPageProps {
   title: string;
   description?: string;
 }
 
+
 const PlaceholderPage = ({
   title,
   description = "This page is currently under construction. Check back soon for exciting updates!",
 }: PlaceholderPageProps) => {
+  
   return (
     <div className="min-h-screen flex items-center justify-center pt-20">
       <div className="container-max section-padding text-center">
@@ -45,9 +48,10 @@ const PlaceholderPage = ({
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Home
               </Link>
-              <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-primary-foreground bg-gradient-to-r from-gradient-from to-gradient-to rounded-lg hover:opacity-90 transition-opacity">
+              <Link to = {"/contact"} className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-primary-foreground bg-gradient-to-r from-gradient-from to-gradient-to rounded-lg hover:opacity-90 transition-opacity"
+              >
                 Request This Page
-              </button>
+              </Link>
             </div>
           </div>
 
