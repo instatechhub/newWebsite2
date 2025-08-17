@@ -61,7 +61,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background to-neutral-950" />
+      <div className="absolute bg-gradient-to-br from-background to-neutral-950" />
 
       {/* Content */}
       <div className="relative z-10 container-max section-padding">
@@ -80,7 +80,7 @@ const Hero = () => {
                 ref={titleRef}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
               >
-                <span className="text-primary">Innovate</span> Outsource
+                <span className="text-primary shining-effect">Innovate</span> Outsource
               </h1>
               <h2
                 ref={subtitleRef}

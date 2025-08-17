@@ -272,7 +272,7 @@ const [isLoading, setIsLoading] = useState(false);
             {/* Contact Form */}
             <div ref={formRef}>
               <div className="glass-morphism rounded-2xl p-8">
-                <h3 className="text-3xl font-bold mb-6">Send Us a Message</h3>
+                <h3 className="text-3xl font-bold mb-6 shining-effect">Send Us a <span className="text-primary">Message</span> </h3>
                 <p className="text-muted-foreground mb-8">
                   Fill out the form below and we'll get back to you within 2
                   hours during business hours.
@@ -395,7 +395,7 @@ const [isLoading, setIsLoading] = useState(false);
             {/* Office Locations */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-3xl font-bold mb-6">Our Office</h3>
+                <h3 className="text-3xl font-bold mb-6 shining-effect">Our <span className="text-primary">Office</span></h3>
                 <p className="text-muted-foreground mb-8">
                   We’ve evolved into a passionate team, delivering top-quality
                   BPO solutions to clients across multiple cities with a global
@@ -465,7 +465,7 @@ const [isLoading, setIsLoading] = useState(false);
       <section className="py-24 bg-gradient-to-r from-primary/10 via-primary/5 to-background">
         <div className="container-max section-padding">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 shining-effect">
               Ready to <span className="text-primary"> Get Started?</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8">

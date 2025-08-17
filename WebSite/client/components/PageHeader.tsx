@@ -57,7 +57,7 @@ const PageHeader = ({ title, subtitle, description, stats }: PageHeaderProps) =>
       <div className="container-max section-padding relative z-10">
         <div ref={headerRef} className="text-center max-w-5xl mx-auto">
           {subtitle && (
-            <span className="animate-element text-primary font-medium uppercase tracking-widest text-sm mb-6 block">
+              <span className="text-primary font-medium uppercase tracking-wide text-sm shining-effect">
               {subtitle}
             </span>
           )}

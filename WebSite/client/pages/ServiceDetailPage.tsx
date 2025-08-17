@@ -125,7 +125,7 @@ useEffect(() => {
         {/* Hero Section */}
         <section ref={heroRef} className="relative py-20">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight shining-effect">
               {service.title.split(" ").slice(0, -1).join(" ")}{" "}
               <span className="text-primary">
                 {service.title.split(" ").slice(-1)}
@@ -198,7 +198,7 @@ useEffect(() => {
           className="py-24 bg-gradient-to-r from-primary/10 via-primary/5 to-background"
         >
           <div className="container-max section-padding text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 shining-effect">
               Ready to <span className="text-primary">Grow Your Business?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">

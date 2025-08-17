@@ -105,7 +105,7 @@ const About = () => {
           <div ref={contentRef} className="space-y-8">
             {/* Section Header */}
             <div className="space-y-4">
-              <span className="text-primary font-medium uppercase tracking-wide text-sm">
+              <span className="text-primary font-medium uppercase tracking-wide text-sm shining-effect">
                 ABOUT US
               </span>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">

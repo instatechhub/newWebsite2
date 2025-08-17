@@ -353,7 +353,7 @@ const AboutPage = () => {
       <section ref={valuesRef} className="py-24">
         <div className="container-max section-padding">
           <div className="text-center mb-16">
-            <span className="text-primary font-medium uppercase tracking-wide text-sm mb-4 block">
+              <span className="text-primary font-medium uppercase tracking-wide text-sm shining-effect mb-4">
               OUR VALUES
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -412,7 +412,7 @@ const AboutPage = () => {
       >
         <div className="container-max section-padding">
           <div className="text-center mb-16">
-            <span className="text-primary font-medium uppercase tracking-wide text-sm mb-4 block">
+              <span className="text-primary font-medium uppercase tracking-wide text-sm shining-effect mb-4">
               GROWTH & SUCCESS PATH
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -477,7 +477,7 @@ const AboutPage = () => {
       <section className="py-24 bg-gradient-to-r from-primary/10 via-primary/5 to-background">
         <div className="container-max section-padding">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 shining-effect">
               Ready to Partner
               <span className="text-primary"> with Growth Experts?</span>
             </h2>

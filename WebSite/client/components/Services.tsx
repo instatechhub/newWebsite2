@@ -120,7 +120,7 @@ const Services = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-16">
           <div>
-            <span className="text-primary font-medium uppercase tracking-wide text-sm mb-4 block">
+              <span className="text-primary font-medium uppercase tracking-wide text-sm shining-effect">
               OUR SPECIALISE
             </span>
             <h2 className="text-4xl md:text-5xl font-bold">

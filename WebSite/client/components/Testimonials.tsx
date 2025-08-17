@@ -48,12 +48,12 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-neutral-900/30 to-background">
+    <section className="py-24 from-neutral-900/30 to-background">
       <div className="container-max section-padding">
         {/* Header */}
         <div className="flex items-center justify-between mb-16">
           <div>
-            <span className="text-primary font-medium uppercase tracking-wide text-sm mb-4 block">
+              <span className="text-primary font-medium uppercase tracking-wide text-sm shining-effect">
               TESTIMONIALS
             </span>
             <h2 className="text-4xl md:text-5xl font-bold">

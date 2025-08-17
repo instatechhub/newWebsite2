@@ -60,7 +60,7 @@ const skills = [
       <div className="container-max section-padding">
         {/* Header */}
         <div className="text-center mb-4">
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-smb shining-effect">
             Empowering {" "}
             <span className="text-primary font-semibold">Businesses</span>{" "}
             Innovative Solutions 

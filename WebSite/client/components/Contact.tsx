@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Contact = () => {
   const navigate = useNavigate();
   return (
-    <section className="py-24 bg-gradient-to-b from-neutral-900/30 to-background overflow-hidden relative">
+    <section className="py-24 bg-gradient-to-r from-primary/10 via-primary/5 to-background overflow-hidden relative">
       <div>
         {/* Cross Pattern Background */}
         <div className="absolute inset-0 opacity-5">
@@ -83,7 +83,7 @@ const Contact = () => {
           {/* Main Content */}
           <div className="relative z-20">
             <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
-              <span className="block text-primary">Get In Touch</span>
+              <span className="block text-primary ">Get In Touch</span>
             </h2>
             <span className="block w-full text-foreground text-[20px] leading-[28px] break-words">
   Let’s work together to scale your business with our expert outsourcing solutions.

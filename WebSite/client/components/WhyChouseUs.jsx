@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
       <div className="container-max section-padding grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left - Text */}
         <div ref={contentRef} className="space-y-8">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">
+          <span className="text-primary font-semibold uppercase tracking-wider text-sm  shining-effect">
             Why Choose Us
           </span>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
