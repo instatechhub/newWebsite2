@@ -19,9 +19,11 @@ import TeamPage from "./pages/TeamPage";
 import FAQPage from "./pages/FAQPage";
 import BlogsPage from "./pages/BlogsPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
-import ContactPage from "./pages/ContactPage";
+import ContactPage from "./pages/ContactPage";  
 import ServiceDetailPage from "./pages/ServiceDetailPage";
 import PlaceholderPage from "./components/PlaceholderPage";
+import TermsConditions from "./components/TermsConditions";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,8 @@ const App = () => (
                 {/* <Route path="/blog/:id" element={<BlogDetailPage />} /> */}
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services/:title" element={<ServiceDetailPage />} />
+                <Route path="/terms-conditions" element={<PlaceholderPage title = "terms-conditions" />} />
+                <Route path="/privacy-policy" element={<PlaceholderPage title = "privacy-policy" />} />
                 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />

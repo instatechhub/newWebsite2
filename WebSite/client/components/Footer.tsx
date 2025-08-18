@@ -47,6 +47,13 @@ const Footer = () => {
       toast.error("Please enter a valid email address.");
       return;
     }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (!emailRegex.test(email)) {
+  toast.error("Please enter a valid email address.");
+  return;
+}
     setIsLoading(true);
 
     try {
@@ -104,9 +111,7 @@ const Footer = () => {
                 <p className="text-primary font-medium">
                   enquiry@Innovateoutsource.com
                 </p>
-                <p className="text-primary font-medium">
-                  +91 8287373007 CALL
-                </p>
+                <p className="text-primary font-medium">+91 8287373007 CALL</p>
               </div>
             </div>
           </div>
@@ -174,14 +179,14 @@ const Footer = () => {
               </div>
               <div className="w-full border-t border-gray-600">
                 <div className="max-w-7xl mx-auto px-4 py-4 flex justify-end">
-                  {/* <div className="flex gap-8 text-gray-400 text-xs">
+                  <div className="flex gap-8 text-gray-400 text-xs">
                     <span className="cursor-pointer hover:text-white transition duration-300 whitespace-nowrap">
-                      Privacy Policy
+                      <Link to={"/privacy-policy"}>Privacy Policy</Link>
                     </span>
                     <span className="cursor-pointer hover:text-white transition duration-300 whitespace-nowrap">
-                      Terms & Conditions
+                      <Link to={"/terms-conditions"}>Terms & Conditions</Link>
                     </span>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
