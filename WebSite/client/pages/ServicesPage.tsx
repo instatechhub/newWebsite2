@@ -115,6 +115,8 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  document.title = "Innovate Outsource - Service";
+  
   const heroRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const processRef = useRef<HTMLDivElement>(null);
@@ -344,7 +346,7 @@ const ServicesPage = () => {
       >
         <div className="container-max section-padding">
           <div className="text-center mb-16">
-              <span className="text-primary font-medium uppercase tracking-wide text-sm shining-effect">
+            <span className="text-primary font-medium uppercase tracking-wide text-sm shining-effect">
               OUR PROCESS
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -386,7 +388,9 @@ const ServicesPage = () => {
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="shining-effect">Ready to Transform Your</span>{" "}
-              <span className="text-primary shining-effect">Business Operations?</span>
+              <span className="text-primary shining-effect">
+                Business Operations?
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
               Let our experts analyze your requirements and design a customized

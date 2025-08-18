@@ -18,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutPage = () => {
+    document.title = "Innovate Outsource - About Us";
+
   const heroRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
   const valuesRef = useRef<HTMLDivElement>(null);

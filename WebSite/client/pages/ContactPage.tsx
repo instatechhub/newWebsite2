@@ -20,6 +20,8 @@ import { toast } from "sonner";
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactPage = () => {
+    document.title = "Innovate Outsource - Contact Us";
+
   const heroRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);

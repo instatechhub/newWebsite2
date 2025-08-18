@@ -19,7 +19,9 @@ const slugifyTitle = (title) =>
     .trim();
 
 const ServiceDetailPage = () => {
+
   const { title } = useParams();
+  document.title = `Innovate Outsource - ${title.replace(/-/g, " ")}`;
 
   const heroRef = useRef(null);
   const imageRef = useRef(null);
@@ -116,7 +118,6 @@ useEffect(() => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* <title>Innovate Outsource- Service</title> */}
       <TopPageHeader
         title={service.title}
         breadcrumb={["Services", service.title]}
