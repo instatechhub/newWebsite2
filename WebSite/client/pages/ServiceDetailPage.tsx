@@ -116,6 +116,7 @@ useEffect(() => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* <title>Innovate Outsource- Service</title> */}
       <TopPageHeader
         title={service.title}
         breadcrumb={["Services", service.title]}

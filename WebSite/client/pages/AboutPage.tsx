@@ -305,10 +305,8 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Top Page Header */}
       <TopPageHeader title="ABOUT US" breadcrumb={["Home", "About Us"]} />
 
-      {/* Page Header */}
       <PageHeader
         title="WE'RE TRANSFORMING BUSINESS OPERATIONS"
         subtitle="ABOUT US"
@@ -320,7 +318,6 @@ const AboutPage = () => {
         ]}
       />
 
-      {/* Stats Section */}
       <section ref={statsRef} className="py-24 bg-card/30">
         <div className="container-max section-padding">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -349,7 +346,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Values Section */}
       <section ref={valuesRef} className="py-24">
         <div className="container-max section-padding">
           <div className="text-center mb-16">
@@ -404,7 +400,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
       <section
         ref={timelineRef}
         className="py-24 bg-gradient-to-br from-card/30 to-background"
@@ -456,12 +451,9 @@ const AboutPage = () => {
                     </div>
                   </div>
 
-                  {/* Timeline Node (Hidden on Mobile) */}
                   <div className="hidden md:flex relative z-10">
                     <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
                   </div>
-
-                  {/* Right/Bottom Column (Empty for spacing on Desktop, hidden on Mobile) */}
                   <div className="hidden md:block w-1/2"></div>
                 </div>
               ))}
