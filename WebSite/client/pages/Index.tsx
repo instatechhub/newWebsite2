@@ -9,6 +9,7 @@ import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import WhyChouseUs from "../components/WhyChouseUs";
 export default function Index() {
+      document.title = "InnovateOutsource Scalable BPO & Call Center Solutions";
 
   return (
     <div className="min-h-screen">
