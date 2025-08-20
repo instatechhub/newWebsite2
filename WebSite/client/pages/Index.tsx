@@ -9,7 +9,6 @@ import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import WhyChouseUs from "../components/WhyChouseUs";
 export default function Index() {
-      document.title = "Innovate Outsource- Home";
 
   return (
     <div className="min-h-screen">
