@@ -77,7 +77,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
-                {item.dropdown ? (
+                {/* {item.dropdown ? (
                   <div
                     className="flex items-center space-x-1 cursor-pointer"
                     onMouseEnter={() => setActiveDropdown(item.name)}
@@ -87,8 +87,6 @@ const Navigation = () => {
                       {item.name}
                     </span>
                     <ChevronDown className="h-3 w-3 text-muted-foreground" />
-
-                    {/* Dropdown Menu */}
                     <div
                       className={cn(
                         "absolute top-8 left-0 min-w-[200px] rounded-lg transition-all duration-200 nav-dropdown-blur",
@@ -110,7 +108,7 @@ const Navigation = () => {
                       </div>
                     </div>
                   </div>
-                ) : (
+                ) : ( */}
                   <Link
                     to={item.href}
                     className={cn(
@@ -122,7 +120,7 @@ const Navigation = () => {
                   >
                     {item.name}
                   </Link>
-                )}
+                {/* )} */}
               </div>
             ))}
           </div>
@@ -170,7 +168,7 @@ const Navigation = () => {
           <div className="py-4 space-y-2">
             {navItems.map((item) => (
               <div key={item.name}>
-                {item.dropdown ? (
+                {/* {item.dropdown ? (
                   <div>
                     <button
                       onClick={() => handleDropdownToggle(item.name)}
@@ -199,7 +197,7 @@ const Navigation = () => {
                       </div>
                     )}
                   </div>
-                ) : (
+                ) : ( */}
                   <Link
                     to={item.href}
                     onClick={() => setIsOpen(false)}
@@ -212,7 +210,7 @@ const Navigation = () => {
                   >
                     {item.name}
                   </Link>
-                )}
+                {/* )} */}
               </div>
             ))}
             <div className="px-4 pt-2 space-y-3">
